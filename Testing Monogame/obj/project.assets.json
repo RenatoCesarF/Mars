@@ -180,11 +180,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\refba\\github\\LearningC#\\Testing Monogame\\MyGame.csproj",
+      "projectUniqueName": "C:\\Users\\refba\\github\\LearningCSharp\\Testing Monogame\\MyGame.csproj",
       "projectName": "MyGame",
-      "projectPath": "C:\\Users\\refba\\github\\LearningC#\\Testing Monogame\\MyGame.csproj",
+      "projectPath": "C:\\Users\\refba\\github\\LearningCSharp\\Testing Monogame\\MyGame.csproj",
       "packagesPath": "C:\\Users\\refba\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\refba\\github\\LearningC#\\Testing Monogame\\obj\\",
+      "outputPath": "C:\\Users\\refba\\github\\LearningCSharp\\Testing Monogame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -238,7 +238,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
