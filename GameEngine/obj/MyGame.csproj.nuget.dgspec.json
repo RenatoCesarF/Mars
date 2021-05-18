@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\refba\\github\\LearningCSharp\\Testing Monogame\\MyGame.csproj": {}
+    "C:\\Users\\refba\\github\\LearningCSharp\\GameEngine\\MyGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\refba\\github\\LearningCSharp\\Testing Monogame\\MyGame.csproj": {
+    "C:\\Users\\refba\\github\\LearningCSharp\\GameEngine\\MyGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\refba\\github\\LearningCSharp\\Testing Monogame\\MyGame.csproj",
+        "projectUniqueName": "C:\\Users\\refba\\github\\LearningCSharp\\GameEngine\\MyGame.csproj",
         "projectName": "MyGame",
-        "projectPath": "C:\\Users\\refba\\github\\LearningCSharp\\Testing Monogame\\MyGame.csproj",
+        "projectPath": "C:\\Users\\refba\\github\\LearningCSharp\\GameEngine\\MyGame.csproj",
         "packagesPath": "C:\\Users\\refba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\refba\\github\\LearningCSharp\\Testing Monogame\\obj\\",
+        "outputPath": "C:\\Users\\refba\\github\\LearningCSharp\\GameEngine\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

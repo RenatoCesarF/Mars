@@ -14,7 +14,7 @@ namespace MyGame
         public static GraphicsDevice device;
         private GraphicsAdapter adapter;
         private GraphicsProfile  graphicsProfile;
-        private Bolinha bolinha;
+        private RigidBody2D bolinha;
         private PresentationParameters  presentationParameters;
         
         public Game1()
@@ -34,7 +34,7 @@ namespace MyGame
             adapter = new GraphicsAdapter();
             device = new GraphicsDevice(adapter,graphicsProfile,presentationParameters);
 
-            bolinha = new Bolinha();
+            bolinha = new RigidBody2D();
 
             base.Initialize();
 
