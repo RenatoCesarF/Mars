@@ -7,6 +7,7 @@ namespace MyGame{
 
     class World{
 
+        public static float GRAVITY = 0.98f;
         public World(){
 
         }
