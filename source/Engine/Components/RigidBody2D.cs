@@ -20,7 +20,7 @@ namespace MyGame
             this.mass = mass;
             this.position= position;
             this.rectColor = color;
-
+           
             height = 50;
             width = 50;
             aceleration = new Vector2(0,0);
@@ -38,12 +38,14 @@ namespace MyGame
         public override void Update(GameTime gametime){
             keyboardReactionCheck();
             checkEdges();
-            applyForce(yForce:2);
+            applyForce(yForce:0);
             
 
             this.force += this.aceleration* this.mass;
             this.position += this.force;
             base.Update(gametime);
+            Console.WriteLine(this.force);
+
         }
         private void checkEdges(){
             if(this.position.Y >= Game1.device.Viewport.Height - 60){

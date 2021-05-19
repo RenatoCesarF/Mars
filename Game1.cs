@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 
 namespace MyGame
@@ -19,7 +20,7 @@ namespace MyGame
             Global.graphics = new GraphicsDeviceManager(this);
             IsMouseVisible = true;
 
-        }
+          }
 
         protected override void Initialize()
         {
@@ -55,6 +56,7 @@ namespace MyGame
             bolinha2.Update(gameTime);
             
             Global.keyboard.UpdateOld();
+      
             base.Update(gameTime);
         }
 
