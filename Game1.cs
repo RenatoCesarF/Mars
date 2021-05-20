@@ -32,7 +32,7 @@ namespace MyGame
             device = new GraphicsDevice(adapter,graphicsProfile,presentationParameters);
 
 
-            bolinha = new RigidBody2D(this,new Vector2(500,50),Color.AliceBlue, mass:0.2f);
+            bolinha = new RigidBody2D(this,new Vector2(10,50),Color.Orange, mass:0.2f);
             bolinha2 = new RigidBody2D(this,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);
             base.Initialize();
 

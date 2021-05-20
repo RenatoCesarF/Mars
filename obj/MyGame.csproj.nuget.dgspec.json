@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\refba\\github\\LearningCSharp\\GameEngine\\MyGame.csproj": {}
+    "C:\\Users\\refba\\github\\LearningCSharp\\MyGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\refba\\github\\LearningCSharp\\GameEngine\\MyGame.csproj": {
+    "C:\\Users\\refba\\github\\LearningCSharp\\MyGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\refba\\github\\LearningCSharp\\GameEngine\\MyGame.csproj",
+        "projectUniqueName": "C:\\Users\\refba\\github\\LearningCSharp\\MyGame.csproj",
         "projectName": "MyGame",
-        "projectPath": "C:\\Users\\refba\\github\\LearningCSharp\\GameEngine\\MyGame.csproj",
+        "projectPath": "C:\\Users\\refba\\github\\LearningCSharp\\MyGame.csproj",
         "packagesPath": "C:\\Users\\refba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\refba\\github\\LearningCSharp\\GameEngine\\obj\\",
+        "outputPath": "C:\\Users\\refba\\github\\LearningCSharp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

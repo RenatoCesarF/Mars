@@ -24,7 +24,7 @@ namespace MyGame
             height = 50;
             width = 50;
             aceleration = new Vector2(0,0);
-            force = new Vector2(10,10);
+            force = new Vector2(0,0);
 
             whiteRectangle = new Texture2D(Game1.device, 1, 1);
             whiteRectangle.SetData(new[] { Color.White });
@@ -38,17 +38,15 @@ namespace MyGame
         public override void Update(GameTime gametime){
             keyboardReactionCheck();
             checkEdges();
-            applyForce(yForce:0);
+            applyForce(yForce:0.098f);
             
 
             this.force += this.aceleration* this.mass;
             this.position += this.force;
             base.Update(gametime);
-            Console.WriteLine(this.force);
-
         }
         private void checkEdges(){
-            if(this.position.Y >= Game1.device.Viewport.Height - 60){
+            if(this.position.Y > Game1.device.Viewport.Height - 60){
                 this.position.Y = Game1.device.Viewport.Height - 61;
                 this.force.Y *=-1 * this.mass;
             }else if(this.position.Y <= 0){
@@ -71,7 +69,7 @@ namespace MyGame
         
         public void keyboardReactionCheck(){
             if(Global.keyboard.GetPress("W")){
-                applyForce(yForce: -5f);
+                applyForce(yForce: -0.3f);
                 return;
             }
             if(Global.keyboard.GetPress("S")){
