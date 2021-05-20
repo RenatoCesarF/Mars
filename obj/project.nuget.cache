@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oYMwy4jdxxXcHESfYbdD0cKV0P+hUHLvKMXBrrH1ZW5obPGANVOCRzi20fUd4KmRd36yMd+t0BSwZiVTyW5K7g==",
+  "dgSpecHash": "roWbtiNCUpRVHF4/AjjjE1N902m/zAfBn3DOOIcXgDdJ2GO0JvhDUSTPHyJ+hyJ50m3b+Yu+7Bc9EA7R5t+RLA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\refba\\github\\LearningCSharp\\MyGame.csproj",
+  "projectFilePath": "C:\\Users\\refba\\github\\Rocket-GameFramework\\MyGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\refba\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
     "C:\\Users\\refba\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"

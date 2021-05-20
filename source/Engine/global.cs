@@ -9,6 +9,5 @@ namespace MyGame{
         public static GraphicsDeviceManager graphics;
         public static SpriteBatch spriteBatch;
         public static InputKeyboard keyboard;
-        
     }
 }

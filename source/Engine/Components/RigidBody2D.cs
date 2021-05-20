@@ -6,29 +6,42 @@ using Microsoft.Xna.Framework.Content;
 
 
 namespace MyGame
+
 {
+
     public class RigidBody2D :DrawableGameComponent 
     {
         private Texture2D whiteRectangle;
         public Vector2 position, force, aceleration,velocity;
         public float mass ;
-
         public int height, width;
         public Color rectColor;
 
+        /// <summary>
+        /// A textured body that reacts to gravity and physics laws
+        /// </summary>
+        /// <param name="game">Used to specify context.</param>
+        /// <param name="position">The start position of the Entity.</param>
+        /// <param name="color">If the Component doesn't have a Texture, it needs to receve a Color</param>
         public RigidBody2D(Game game, Vector2 position, Color color, float mass = 0.1f ) : base(game) {
             this.mass = mass;
             this.position= position;
             this.rectColor = color;
            
-            height = 50;
-            width = 50;
-            aceleration = new Vector2(0,0);
-            force = new Vector2(0,0);
+            this.height = 50;
+            this.width = 50;
+            this.aceleration = new Vector2(0,0);
+            this.force = new Vector2(0,0);
+            //TODO: add a texture or a based2d as a required argument
 
             whiteRectangle = new Texture2D(Game1.device, 1, 1);
             whiteRectangle.SetData(new[] { Color.White });
         }
+        /// <summary>
+        /// Applies a force and X and Y direction, it is effected by the mass of the object
+        /// </summary>
+        /// <param name="xForce">The force applied in X axis</param>
+        /// <param name="yForce">The force applied in Y axis</param>
         public void applyForce(float xForce = 0f,float yForce = 0f ){
             Vector2 appliedForce = new Vector2(xForce,yForce);
             appliedForce /= mass;
@@ -39,7 +52,6 @@ namespace MyGame
             keyboardReactionCheck();
             checkEdges();
             applyForce(yForce:0.098f);
-            
 
             this.force += this.aceleration* this.mass;
             this.position += this.force;
@@ -65,26 +77,20 @@ namespace MyGame
         public override void Draw(GameTime gameTime){
             Global.spriteBatch.Draw(whiteRectangle, new  Rectangle((int)(position.X),(int)(position.Y),width, height),this.rectColor);
             base.Draw(gameTime);
-        }
-        
+        }        
         public void keyboardReactionCheck(){
             if(Global.keyboard.GetPress("W")){
                 applyForce(yForce: -0.3f);
-                return;
             }
             if(Global.keyboard.GetPress("S")){
                 applyForce(yForce: 0.05f);
-                return;
             }
             if(Global.keyboard.GetPress("A")){
                 applyForce(xForce: -0.05f);
-                return;
             }
             if(Global.keyboard.GetPress("D")){
                 applyForce(xForce: 0.05f);
-                return;
             }
-            
         }
     }
 }

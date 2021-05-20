@@ -14,13 +14,11 @@ namespace MyGame
         private RigidBody2D bolinha,bolinha2;
         private PresentationParameters  presentationParameters;
         
-        public Game1()
-        {
+        public Game1(){
             Content.RootDirectory = "Content";
             Global.graphics = new GraphicsDeviceManager(this);
             IsMouseVisible = true;
-
-          }
+        }
 
         protected override void Initialize()
         {
@@ -30,7 +28,6 @@ namespace MyGame
 
             adapter = new GraphicsAdapter();
             device = new GraphicsDevice(adapter,graphicsProfile,presentationParameters);
-
 
             bolinha = new RigidBody2D(this,new Vector2(10,50),Color.Orange, mass:0.2f);
             bolinha2 = new RigidBody2D(this,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);
@@ -54,7 +51,8 @@ namespace MyGame
             Global.keyboard.Update();
             bolinha.Update(gameTime);
             bolinha2.Update(gameTime);
-            
+
+
             Global.keyboard.UpdateOld();
       
             base.Update(gameTime);
