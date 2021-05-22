@@ -4,11 +4,7 @@ using System;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 
-
-namespace MyGame
-
-{
-
+namespace MyGame{
     public class RigidBody2D :DrawableGameComponent 
     {
         private Texture2D whiteRectangle;
@@ -18,22 +14,25 @@ namespace MyGame
         public Color rectColor;
 
         /// <summary>
-        /// A textured body that reacts to gravity and physics laws
+        /// A entity that reacts to gravity and physics laws simulations.
+        /// Colisions and motion are auto-simulated
         /// </summary>
         /// <param name="game">Used to specify context.</param>
         /// <param name="position">The start position of the Entity.</param>
         /// <param name="color">If the Component doesn't have a Texture, it needs to receve a Color</param>
+        /// <param name="mass">the mass will interfer in motion and colision stuff</param>
         public RigidBody2D(Game game, Vector2 position, Color color, float mass = 0.1f ) : base(game) {
             this.mass = mass;
             this.position= position;
             this.rectColor = color;
-           
             this.height = 50;
             this.width = 50;
             this.aceleration = new Vector2(0,0);
             this.force = new Vector2(0,0);
             //TODO: add a texture or a based2d as a required argument
-
+            //TODO: add Friction
+            //TODO: add Bounce
+            //TODO: Add rotation
             whiteRectangle = new Texture2D(Game1.device, 1, 1);
             whiteRectangle.SetData(new[] { Color.White });
         }
@@ -47,7 +46,6 @@ namespace MyGame
             appliedForce /= mass;
             this.force += appliedForce;
         }
-
         public override void Update(GameTime gametime){
             keyboardReactionCheck();
             checkEdges();
