@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using System;
 
 
-namespace MyGame
+namespace RocketFramework
 {
     public class Game1 : Game
     {

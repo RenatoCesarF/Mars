@@ -4,7 +4,7 @@ using System;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 
-namespace MyGame{
+namespace RocketFramework{
     public class RigidBody2D :DrawableGameComponent 
     {
         private Texture2D whiteRectangle;
@@ -51,16 +51,13 @@ namespace MyGame{
             checkEdges();
             applyForce(yForce:0.098f);
 
-            this.force += this.aceleration* this.mass;
+            this.force += this.aceleration * this.mass;
             this.position += this.force;
             base.Update(gametime);
         }
         private void checkEdges(){
             if(this.position.Y > Game1.device.Viewport.Height - 60){
                 this.position.Y = Game1.device.Viewport.Height - 61;
-                this.force.Y *=-1 * this.mass;
-            }else if(this.position.Y <= 0){
-                this.position.Y = 0;
                 this.force.Y *=-1 * this.mass;
             }
 

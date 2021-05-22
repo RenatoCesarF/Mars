@@ -1,32 +1,32 @@
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\MyGame.exe
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\MyGame.deps.json
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.json
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.dev.json
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\MyGame.dll
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\MyGame.pdb
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
-C:\Users\refba\github\a\MyGame\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
-C:\Users\refba\github\a\MyGame\obj\Debug\netcoreapp3.1\MyGame.csprojAssemblyReference.cache
-C:\Users\refba\github\a\MyGame\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfoInputs.cache
-C:\Users\refba\github\a\MyGame\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfo.cs
-C:\Users\refba\github\a\MyGame\obj\Debug\netcoreapp3.1\MyGame.csproj.CoreCompileInputs.cache
-C:\Users\refba\github\a\MyGame\obj\Debug\netcoreapp3.1\MyGame.csproj.CopyComplete
-C:\Users\refba\github\a\MyGame\obj\Debug\netcoreapp3.1\MyGame.dll
-C:\Users\refba\github\a\MyGame\obj\Debug\netcoreapp3.1\MyGame.pdb
-C:\Users\refba\github\a\MyGame\obj\Debug\netcoreapp3.1\MyGame.genruntimeconfig.cache
-C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.exe
-C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.deps.json
-C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.json
-C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.dev.json
-C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.dll
-C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.pdb
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\RocketFramework.exe
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\RocketFramework.deps.json
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\RocketFramework.runtimeconfig.json
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\RocketFramework.runtimeconfig.dev.json
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\RocketFramework.dll
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\RocketFramework.pdb
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+C:\Users\refba\github\a\RocketFramework\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+C:\Users\refba\github\a\RocketFramework\obj\Debug\netcoreapp3.1\RocketFramework.csprojAssemblyReference.cache
+C:\Users\refba\github\a\RocketFramework\obj\Debug\netcoreapp3.1\RocketFramework.AssemblyInfoInputs.cache
+C:\Users\refba\github\a\RocketFramework\obj\Debug\netcoreapp3.1\RocketFramework.AssemblyInfo.cs
+C:\Users\refba\github\a\RocketFramework\obj\Debug\netcoreapp3.1\RocketFramework.csproj.CoreCompileInputs.cache
+C:\Users\refba\github\a\RocketFramework\obj\Debug\netcoreapp3.1\RocketFramework.csproj.CopyComplete
+C:\Users\refba\github\a\RocketFramework\obj\Debug\netcoreapp3.1\RocketFramework.dll
+C:\Users\refba\github\a\RocketFramework\obj\Debug\netcoreapp3.1\RocketFramework.pdb
+C:\Users\refba\github\a\RocketFramework\obj\Debug\netcoreapp3.1\RocketFramework.genruntimeconfig.cache
+C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.exe
+C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.deps.json
+C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.runtimeconfig.json
+C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.runtimeconfig.dev.json
+C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.dll
+C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.pdb
 C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
 C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
 C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
@@ -36,20 +36,20 @@ C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\runtim
 C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
 C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
 C:\Users\refba\github\LearningC#\Testing Monogame\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
-C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.csprojAssemblyReference.cache
-C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfoInputs.cache
-C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfo.cs
-C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.csproj.CoreCompileInputs.cache
-C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.csproj.CopyComplete
-C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.dll
-C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.pdb
-C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.genruntimeconfig.cache
-C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.exe
-C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.deps.json
-C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.json
-C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.dev.json
-C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.dll
-C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\MyGame.pdb
+C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.csprojAssemblyReference.cache
+C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.AssemblyInfoInputs.cache
+C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.AssemblyInfo.cs
+C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.csproj.CoreCompileInputs.cache
+C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.csproj.CopyComplete
+C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.dll
+C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.pdb
+C:\Users\refba\github\LearningC#\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.genruntimeconfig.cache
+C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.exe
+C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.deps.json
+C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.runtimeconfig.json
+C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.runtimeconfig.dev.json
+C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.dll
+C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\RocketFramework.pdb
 C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
 C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
 C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
@@ -59,20 +59,20 @@ C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\ru
 C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
 C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
 C:\Users\refba\github\LearningCSharp\Testing Monogame\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
-C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.csprojAssemblyReference.cache
-C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfoInputs.cache
-C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfo.cs
-C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.csproj.CoreCompileInputs.cache
-C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.csproj.CopyComplete
-C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.dll
-C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.pdb
-C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\MyGame.genruntimeconfig.cache
-C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\MyGame.exe
-C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\MyGame.deps.json
-C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.json
-C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.dev.json
-C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\MyGame.dll
-C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\MyGame.pdb
+C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.csprojAssemblyReference.cache
+C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.AssemblyInfoInputs.cache
+C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.AssemblyInfo.cs
+C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.csproj.CoreCompileInputs.cache
+C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.csproj.CopyComplete
+C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.dll
+C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.pdb
+C:\Users\refba\github\LearningCSharp\Testing Monogame\obj\Debug\netcoreapp3.1\RocketFramework.genruntimeconfig.cache
+C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\RocketFramework.exe
+C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\RocketFramework.deps.json
+C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\RocketFramework.runtimeconfig.json
+C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\RocketFramework.runtimeconfig.dev.json
+C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\RocketFramework.dll
+C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\RocketFramework.pdb
 C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
 C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
 C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
@@ -82,20 +82,20 @@ C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\runtimes
 C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
 C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
 C:\Users\refba\github\LearningCSharp\GameEngine\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
-C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\MyGame.csprojAssemblyReference.cache
-C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfoInputs.cache
-C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfo.cs
-C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\MyGame.csproj.CoreCompileInputs.cache
-C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\MyGame.csproj.CopyComplete
-C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\MyGame.dll
-C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\MyGame.pdb
-C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\MyGame.genruntimeconfig.cache
-C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\MyGame.exe
-C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\MyGame.deps.json
-C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.json
-C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.dev.json
-C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\MyGame.dll
-C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\MyGame.pdb
+C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\RocketFramework.csprojAssemblyReference.cache
+C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\RocketFramework.AssemblyInfoInputs.cache
+C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\RocketFramework.AssemblyInfo.cs
+C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\RocketFramework.csproj.CoreCompileInputs.cache
+C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\RocketFramework.csproj.CopyComplete
+C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\RocketFramework.dll
+C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\RocketFramework.pdb
+C:\Users\refba\github\LearningCSharp\GameEngine\obj\Debug\netcoreapp3.1\RocketFramework.genruntimeconfig.cache
+C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\RocketFramework.exe
+C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\RocketFramework.deps.json
+C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\RocketFramework.runtimeconfig.json
+C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\RocketFramework.runtimeconfig.dev.json
+C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\RocketFramework.dll
+C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\RocketFramework.pdb
 C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
 C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
 C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
@@ -105,20 +105,14 @@ C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\runtimes\win-x64\na
 C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
 C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
 C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
-C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.csprojAssemblyReference.cache
-C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfoInputs.cache
-C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfo.cs
-C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.csproj.CoreCompileInputs.cache
-C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.csproj.CopyComplete
-C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.dll
-C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.pdb
-C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.genruntimeconfig.cache
-C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.exe
-C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.deps.json
-C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.json
-C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.dev.json
-C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.dll
-C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.pdb
+C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\RocketFramework.csprojAssemblyReference.cache
+C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\RocketFramework.AssemblyInfoInputs.cache
+C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\RocketFramework.AssemblyInfo.cs
+C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\RocketFramework.csproj.CoreCompileInputs.cache
+C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\RocketFramework.csproj.CopyComplete
+C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\RocketFramework.dll
+C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\RocketFramework.pdb
+C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\RocketFramework.genruntimeconfig.cache
 C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
 C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
 C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
@@ -128,6 +122,12 @@ C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\runtimes\win-
 C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
 C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
 C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.exe
+C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.deps.json
+C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.json
+C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.runtimeconfig.dev.json
+C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.dll
+C:\Users\refba\github\Rocket-GameFramework\bin\Debug\netcoreapp3.1\MyGame.pdb
 C:\Users\refba\github\Rocket-GameFramework\obj\Debug\netcoreapp3.1\MyGame.csprojAssemblyReference.cache
 C:\Users\refba\github\Rocket-GameFramework\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfoInputs.cache
 C:\Users\refba\github\Rocket-GameFramework\obj\Debug\netcoreapp3.1\MyGame.AssemblyInfo.cs

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Input;
 
-namespace MyGame
+namespace RocketFramework
 {
     public class InputKeyboard
     {

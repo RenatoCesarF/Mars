@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 
 
-namespace MyGame{
+namespace RocketFramework{
 
     class Basic2D{
 

@@ -1,5 +1,5 @@
 
-namespace MyGame
+namespace RocketFramework
 {
     public class InputKey
     {

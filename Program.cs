@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MyGame
+namespace RocketFramework
 {
     public static class Program
     {
