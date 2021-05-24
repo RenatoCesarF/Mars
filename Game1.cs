@@ -31,6 +31,9 @@ namespace RocketFramework
 
             bolinha = new RigidBody2D(this,new Vector2(10,50),Color.Orange, mass:0.2f);
             bolinha2 = new RigidBody2D(this,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);
+
+            Rigidbody2D r = new Rigidbody2D();
+
             base.Initialize();
 
         }
