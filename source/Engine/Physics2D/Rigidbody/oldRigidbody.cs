@@ -70,7 +70,9 @@ namespace RocketFramework{
             }
         }
         public override void Draw(GameTime gameTime){
-            Global.spriteBatch.Draw(whiteRectangle, new  Rectangle((int)(position.X),(int)(position.Y),width, height),this.rectColor);
+            Global.spriteBatch.Draw(
+                whiteRectangle, 
+                new  Rectangle((int)(position.X),(int)(position.Y),width, height),this.rectColor);
             base.Draw(gameTime);
         }        
         public void keyboardReactionCheck(){

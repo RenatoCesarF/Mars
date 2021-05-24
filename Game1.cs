@@ -12,6 +12,7 @@ namespace RocketFramework
         private GraphicsAdapter adapter;
         private GraphicsProfile  graphicsProfile;
         private RigidBody2D bolinha,bolinha2;
+        private Line2D line;
         private PresentationParameters  presentationParameters;
         
         public Game1(){
@@ -32,7 +33,7 @@ namespace RocketFramework
             bolinha = new RigidBody2D(this,new Vector2(10,50),Color.Orange, mass:0.2f);
             bolinha2 = new RigidBody2D(this,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);
 
-            Rigidbody2D r = new Rigidbody2D();
+            line = new Line2D(this);
 
             base.Initialize();
 
@@ -55,7 +56,7 @@ namespace RocketFramework
             bolinha.Update(gameTime);
             bolinha2.Update(gameTime);
 
-
+            line.Update(gameTime);
             Global.keyboard.UpdateOld();
       
             base.Update(gameTime);
@@ -63,10 +64,12 @@ namespace RocketFramework
 
         protected override void Draw(GameTime gameTime)
         {
+
             base.Draw(gameTime);
             GraphicsDevice.Clear(Color.Black);
             Global.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
 
+            line.Draw(gameTime);
             bolinha.Draw(gameTime);
             bolinha2.Draw(gameTime);
 
