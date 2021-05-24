@@ -14,6 +14,7 @@ namespace RocketFramework
         private RigidBody2D bolinha,bolinha2;
         private Line2D line;
         private PresentationParameters  presentationParameters;
+        private Texture2D texture;
         
         public Game1(){
             Content.RootDirectory = "Content";
@@ -32,7 +33,7 @@ namespace RocketFramework
 
             bolinha = new RigidBody2D(this,new Vector2(10,50),Color.Orange, mass:0.2f);
             bolinha2 = new RigidBody2D(this,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);
-
+            texture = Content.Load<Texture2D>("mario");
             line = new Line2D(this);
 
             base.Initialize();
@@ -66,9 +67,11 @@ namespace RocketFramework
         {
 
             base.Draw(gameTime);
+
             GraphicsDevice.Clear(Color.Black);
             Global.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
 
+            Global.spriteBatch.Draw(texture, Vector2.Zero, Color.White);
             line.Draw(gameTime);
             bolinha.Draw(gameTime);
             bolinha2.Draw(gameTime);
