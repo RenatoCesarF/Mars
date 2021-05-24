@@ -15,9 +15,12 @@ namespace RocketFramework
         private Line2D line;
         private PresentationParameters  presentationParameters;
         private Texture2D texture;
+        private Basic2D basic;
         
         public Game1(){
+            
             Content.RootDirectory = "Content";
+            Global.content = Content;
             Global.graphics = new GraphicsDeviceManager(this);
             IsMouseVisible = true;
         }
@@ -33,7 +36,10 @@ namespace RocketFramework
 
             bolinha = new RigidBody2D(this,new Vector2(10,50),Color.Orange, mass:0.2f);
             bolinha2 = new RigidBody2D(this,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);
-            texture = Content.Load<Texture2D>("sprite");
+
+            texture = Global.content.Load<Texture2D>("sprite");
+
+            basic = new Basic2D("sprite", new Vector2(50,50),new Vector2(100,100));
             line = new Line2D(this);
 
             base.Initialize();
@@ -54,11 +60,12 @@ namespace RocketFramework
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             Global.keyboard.Update();
+
             bolinha.Update(gameTime);
             bolinha2.Update(gameTime);
-
             line.Update(gameTime);
             Global.keyboard.UpdateOld();
+            basic.Update();
       
             base.Update(gameTime);
         }
@@ -70,13 +77,16 @@ namespace RocketFramework
 
             GraphicsDevice.Clear(Color.PapayaWhip);
             Global.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
-            Global.spriteBatch.Draw(
-                texture, Vector2.Zero, null, Color.White, 0f, 
-                Vector2.Zero, 5f, SpriteEffects.None, 0f
-            );
+
+
+            // Global.spriteBatch.Draw(
+            //     texture, Vector2.Zero, null, Color.White, 0f, 
+            //     Vector2.Zero, 5f, SpriteEffects.None, 0f
+            // );
             line.Draw(gameTime);
             bolinha.Draw(gameTime);
             bolinha2.Draw(gameTime);
+            basic.Draw();
 
             Global.spriteBatch.End();
         }

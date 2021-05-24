@@ -14,22 +14,23 @@ public class Line2D :DrawableGameComponent
     private Vector2 originVector;
 
     public Line2D(Game game): base (game){
-        SimpleTexture = new Texture2D(Game1.device, 1, 1, false,SurfaceFormat.Color);
+        SimpleTexture = new Texture2D(Game1.device, 1,1);
+        SimpleTexture.SetData(new[] { Color.White });
         originVector =  new Vector2(SimpleTexture.Bounds.Width/2,SimpleTexture.Bounds.Height/2);
-        int[] pixel = {0xFFFFFF}; // White. 0xFF is Red, 0xFF0000 is Blue
-        SimpleTexture.SetData<Int32> (pixel, 0, SimpleTexture.Width * SimpleTexture.Height);
     }
     public override void Draw(GameTime gameTime){
         Global.spriteBatch.Draw(
-            SimpleTexture, new Rectangle(100, 100, 100, 10), null,
-            Color.Blue, this.rotation, originVector, SpriteEffects.None, 1f
+            SimpleTexture, new Rectangle(100, 100, 300, 10), null,
+            Color.Blue, this.rotation, new Vector2(0.5f,0.5f), SpriteEffects.None, 1f
         );
         base.Draw(gameTime);
     }
 
     public override void Update(GameTime gameTime){
         this.rotation +=0.1f;
+        Console.WriteLine(SimpleTexture.Bounds.Width/2);
         base.Update(gameTime);
+
     }
 }
 }
