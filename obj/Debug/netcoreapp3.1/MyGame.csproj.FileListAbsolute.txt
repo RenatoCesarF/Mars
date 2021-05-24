@@ -136,4 +136,4 @@ C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.csproj.CopyC
 C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.dll
 C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.pdb
 C:\Users\refba\github\LearningCSharp\obj\Debug\netcoreapp3.1\MyGame.genruntimeconfig.cache
-C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\Content\mario.xnb
+C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\Content\sprite.xnb
