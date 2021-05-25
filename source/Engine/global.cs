@@ -2,7 +2,12 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 
+
 namespace RocketFramework{
+    ///<summary>
+    /// Global contains global variables:
+    /// ContentManager; graphicsDeviceManager; SpriteBatch; InputKeyboard;
+    ///</summary>
     class Global
     {
         public static ContentManager content;

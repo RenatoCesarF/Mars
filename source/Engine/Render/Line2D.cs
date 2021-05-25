@@ -6,31 +6,31 @@ using System;
 namespace RocketFramework
 {
     
-public class Line2D :DrawableGameComponent 
+public class Line2D
 {
-    private static Texture2D _texture;
     public Texture2D SimpleTexture; 
     public float rotation;
     private Vector2 originVector;
-
-    public Line2D(Game game): base (game){
-        SimpleTexture = new Texture2D(Game1.device, 1,1);
+    private Rectangle rectangle;
+    
+    ///<summary>
+    ///A line segment that receves, position, thikness and lenght
+    ///</summary>
+    public Line2D(Vector2 position,int thikness = 2, int lenght = 100){
+        this.rectangle = new Rectangle((int)(position.X),(int)(position.Y),lenght,thikness);
+        this.SimpleTexture = new Texture2D(Game1.device, 1,1);
+        this.originVector =  new Vector2(0.5f,0.5f);//Vector2(SimpleTexture.Bounds.Width/2,SimpleTexture.Bounds.Height/2);
         SimpleTexture.SetData(new[] { Color.White });
-        originVector =  new Vector2(SimpleTexture.Bounds.Width/2,SimpleTexture.Bounds.Height/2);
     }
-    public override void Draw(GameTime gameTime){
+    public virtual void Draw(float customLayerDepth =0.0f){
         Global.spriteBatch.Draw(
-            SimpleTexture, new Rectangle(100, 100, 300, 10), null,
-            Color.Blue, this.rotation, new Vector2(0.5f,0.5f), SpriteEffects.None, 1f
+            SimpleTexture, this.rectangle, null,
+            Color.Red, this.rotation, originVector, 
+            SpriteEffects.None, customLayerDepth
         );
-        base.Draw(gameTime);
     }
-
-    public override void Update(GameTime gameTime){
+    public virtual void Update(){
         this.rotation +=0.1f;
-        Console.WriteLine(SimpleTexture.Bounds.Width/2);
-        base.Update(gameTime);
-
     }
 }
 }

@@ -5,11 +5,11 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 
 namespace RocketFramework{
-    public class RigidBody2D :DrawableGameComponent 
+    public class RigidBody2D
     {
         private Texture2D whiteRectangle;
         public Vector2 position, force, aceleration,velocity;
-        public float mass ;
+        public float mass, rotation = 0;
         public int height, width;
         public Color rectColor;
 
@@ -21,7 +21,7 @@ namespace RocketFramework{
         /// <param name="position">The start position of the Entity.</param>
         /// <param name="color">If the Component doesn't have a Texture, it needs to receve a Color</param>
         /// <param name="mass">the mass will interfer in motion and colision stuff</param>
-        public RigidBody2D(Game game, Vector2 position, Color color, float mass = 0.1f ) : base(game) {
+        public RigidBody2D(Game game, Vector2 position, Color color, float mass = 0.1f )  {
             this.mass = mass;
             this.position= position;
             this.rectColor = color;
@@ -46,34 +46,38 @@ namespace RocketFramework{
             appliedForce /= mass;
             this.force += appliedForce;
         }
-        public override void Update(GameTime gametime){
+        public virtual void Update(){
             keyboardReactionCheck();
             checkEdges();
             applyForce(yForce:0.098f);
 
             this.force += this.aceleration * this.mass;
             this.position += this.force;
-            base.Update(gametime);
         }
         private void checkEdges(){
-            if(this.position.Y > Game1.device.Viewport.Height - 60){
-                this.position.Y = Game1.device.Viewport.Height - 61;
+            if(this.position.Y >  Global.graphics.PreferredBackBufferHeight - 60){
+                this.position.Y =  Global.graphics.PreferredBackBufferHeight - 61;
                 this.force.Y *=-1 * this.mass;
             }
 
-            if(this.position.X >= Game1.device.Viewport.Width - 40){
-                this.position.X = Game1.device.Viewport.Width - 40;
+            if(this.position.X >= Global.graphics.PreferredBackBufferWidth - 40){
+                this.position.X = Global.graphics.PreferredBackBufferWidth - 40;
                 this.force.X *= -1 * this.mass;
             }else if(this.position.X <=0){
                 this.position.X =0;
                 this.force.X *=-1 * this.mass;
             }
         }
-        public override void Draw(GameTime gameTime){
+        public virtual void Draw(float customLayerDepth = 0){
+            // Global.spriteBatch.Draw(
+            //     whiteRectangle, new  Rectangle((int)(position.X),(int)(position.Y),width, height),this.rectColor);
+
             Global.spriteBatch.Draw(
-                whiteRectangle, 
-                new  Rectangle((int)(position.X),(int)(position.Y),width, height),this.rectColor);
-            base.Draw(gameTime);
+                texture: whiteRectangle,
+                new  Rectangle((int)(position.X),(int)(position.Y),width, height),
+                null, this.rectColor,rotation,new Vector2(0,0),
+                SpriteEffects.None,customLayerDepth
+            );
         }        
         public void keyboardReactionCheck(){
             if(Global.keyboard.GetPress("W")){
