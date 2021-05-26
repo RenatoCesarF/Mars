@@ -11,7 +11,7 @@ namespace RocketFramework
         public static GraphicsDevice device;
         private GraphicsAdapter adapter;
         private GraphicsProfile  graphicsProfile;
-        private RigidBody2D square,square2;
+        public static RigidBody2D square,square2;
         private Line2D line;
         private PresentationParameters  presentationParameters;
         private Basic2D basic;
@@ -34,7 +34,8 @@ namespace RocketFramework
             Global.graphics.PreferredBackBufferWidth = Resolution.GameWidth;
             Global.graphics.PreferredBackBufferHeight = Resolution.GameHeight;
             
-            //============== Fulll Screen ===========
+            //TODO: add this into the engine
+            //============== Fulll Screen =========== 
             // this.Window.Position = new Point(0, 0);
             // this.Window.IsBorderless = true;
             // Global.graphics.PreferredBackBufferWidth = Resolution.ScreenWidth;
@@ -48,7 +49,6 @@ namespace RocketFramework
 
             Global.graphics.ApplyChanges();
             
-    
             adapter = new GraphicsAdapter();
             device = new GraphicsDevice(adapter,graphicsProfile,presentationParameters);
 
@@ -56,8 +56,7 @@ namespace RocketFramework
             square2 = new RigidBody2D(this,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);
 
             basic = new Basic2D("sprite", new Vector2(400,250),new Vector2(100,100));
-            line = new Line2D(new Vector2(200,200));
-
+            line = new Line2D( new Vector2(400,250), new Vector2(400,250));
 
             base.Initialize();
         }

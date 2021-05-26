@@ -21,7 +21,7 @@ namespace RocketFramework{
             PreviousWindowWidth = graphics.PreferredBackBufferWidth;
             PreviousWindowHeight = graphics.PreferredBackBufferHeight;
             WasResized = false;
-            GameWidth = 500;
+            GameWidth = 800;
             GameHeight = 500;
             CalculateMatrix(graphics);
         }

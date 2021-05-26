@@ -8,10 +8,11 @@ namespace RocketFramework{
     public class RigidBody2D
     {
         private Texture2D whiteRectangle;
-        public Vector2 position, force, aceleration,velocity;
-        public float mass, rotation = 0;
-        public int height, width;
-        public Color rectColor;
+        private Vector2 position, force, aceleration,velocity;
+        private Vector2 originVector;
+        private float mass, rotation = 0;
+        private int height, width;
+        private Color rectColor;
 
         /// <summary>
         /// A entity that reacts to gravity and physics laws simulations.
@@ -29,12 +30,13 @@ namespace RocketFramework{
             this.width = 50;
             this.aceleration = new Vector2(0,0);
             this.force = new Vector2(0,0);
+            whiteRectangle = new Texture2D(Game1.device, 1, 1);
+            whiteRectangle.SetData(new[] { Color.White });
+            this.originVector = new Vector2(0.5f,0.5f);
             //TODO: add a texture or a based2d as a required argument
             //TODO: add Friction
             //TODO: add Bounce
             //TODO: Add rotation
-            whiteRectangle = new Texture2D(Game1.device, 1, 1);
-            whiteRectangle.SetData(new[] { Color.White });
         }
         /// <summary>
         /// Applies a force and X and Y direction, it is effected by the mass of the object
@@ -49,7 +51,7 @@ namespace RocketFramework{
         public virtual void Update(){
             keyboardReactionCheck();
             checkEdges();
-            applyForce(yForce:0.098f);
+            // applyForce(yForce:0.098f);
 
             this.force += this.aceleration * this.mass;
             this.position += this.force;
@@ -60,8 +62,8 @@ namespace RocketFramework{
                 this.force.Y *=-1 * this.mass;
             }
 
-            if(this.position.X >= Global.graphics.PreferredBackBufferWidth - 40){
-                this.position.X = Global.graphics.PreferredBackBufferWidth - 40;
+            if(this.position.X >= Global.graphics.PreferredBackBufferWidth - 20){
+                this.position.X = Global.graphics.PreferredBackBufferWidth - 20;
                 this.force.X *= -1 * this.mass;
             }else if(this.position.X <=0){
                 this.position.X =0;
@@ -75,13 +77,13 @@ namespace RocketFramework{
             Global.spriteBatch.Draw(
                 texture: whiteRectangle,
                 new  Rectangle((int)(position.X),(int)(position.Y),width, height),
-                null, this.rectColor,rotation,new Vector2(0,0),
+                null, this.rectColor,rotation,originVector,
                 SpriteEffects.None,customLayerDepth
             );
         }        
         public void keyboardReactionCheck(){
             if(Global.keyboard.GetPress("W")){
-                applyForce(yForce: -0.3f);
+                applyForce(yForce: -0.05f);
             }
             if(Global.keyboard.GetPress("S")){
                 applyForce(yForce: 0.05f);
@@ -92,6 +94,10 @@ namespace RocketFramework{
             if(Global.keyboard.GetPress("D")){
                 applyForce(xForce: 0.05f);
             }
+        }
+
+        public Vector2 getPosition(){
+            return this.position;
         }
     }
 }
