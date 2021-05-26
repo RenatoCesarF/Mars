@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 
-namespace RocketFramework{
+namespace Mars{
     static class Resolution
     {
         static public Matrix ScaleMatrix { get; set; }

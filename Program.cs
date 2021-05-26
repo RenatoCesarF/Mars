@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RocketFramework
+namespace Mars
 {
     public static class Program
     {

@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 ///</summary>
 ///Axis Aling Bounding Box
 /// <summary>
-namespace RocketFramework
+namespace Mars
 {
 class AABB
 {

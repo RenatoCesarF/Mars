@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 
 
-namespace RocketFramework{
+namespace Mars{
     ///<summary>
     /// Global contains global variables:
     /// ContentManager; graphicsDeviceManager; SpriteBatch; InputKeyboard;

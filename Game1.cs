@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using System;
 
 
-namespace RocketFramework
+namespace Mars
 {
     public class Game1 : Game
     {
@@ -56,7 +56,7 @@ namespace RocketFramework
             square2 = new RigidBody2D(this,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);
 
             basic = new Basic2D("sprite", new Vector2(400,250),new Vector2(100,100));
-            line = new Line2D( new Vector2(400,250), new Vector2(400,250));
+            line = new Line2D( new Vector2(40,20), new Vector2(400,250));
 
             base.Initialize();
         }

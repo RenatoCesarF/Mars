@@ -4,7 +4,7 @@ using System;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 
-namespace RocketFramework{
+namespace Mars{
     public class RigidBody2D
     {
         private Texture2D whiteRectangle;

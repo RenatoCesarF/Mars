@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Content;
 using System;
 
 
-namespace RocketFramework{
+namespace Mars{
 
     class Basic2D{
 

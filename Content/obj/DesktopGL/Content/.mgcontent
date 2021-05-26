@@ -4,7 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>c:/Users/refba/github/LearningCSharp/Content/sprite.png</File>
+    <File>C:/Users/refba/github/Rocket-Framework/Content/sprite.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Input;
 
-namespace RocketFramework
+namespace Mars
 {
     public class InputKeyboard
     {
