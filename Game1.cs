@@ -15,6 +15,8 @@ namespace Mars
         private Line2D line;
         private PresentationParameters  presentationParameters;
         private Basic2D basic;
+
+        public SpriteFont font;
         
         public Game1(){
             this.Window.ClientSizeChanged += delegate { Resolution.WasResized = true; };
@@ -66,6 +68,7 @@ namespace Mars
             Global.keyboard = new InputKeyboard();
             Global.content = this.Content;
             Global.spriteBatch = new SpriteBatch(GraphicsDevice);
+            font = Global.content.Load<SpriteFont>("font");
         }
         protected override void Update(GameTime gameTime){
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
@@ -94,6 +97,8 @@ namespace Mars
             basic.Draw();
             square.Draw();
             square2.Draw();
+
+            Global.spriteBatch.DrawString(font,"This is a font", new Vector2(50,50),Color.Black);
 
             Global.spriteBatch.End();
         }

@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/refba/github/LearningCSharp/Content/sprite.png","C:/Users/refba/github/LearningCSharp/Content/bin/DesktopGL/sprite.xnb","TextureProcessor","Texture2DContent",124,341,0,3487819
+"C:/Users/refba/github/LearningCSharp/Content/font.spritefont","C:/Users/refba/github/LearningCSharp/Content/bin/DesktopGL/font.xnb","FontDescriptionProcessor","SpriteFontContent",2012,37922,0,3796425
