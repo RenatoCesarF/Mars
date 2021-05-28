@@ -11,5 +11,10 @@ namespace Mars.Components
         public Vector2 scale;
         public float rotation = 0.0f;
         public bool isVisible;
+
+        public virtual void Update(){}
+        public virtual void Draw(Vector2 OFFSET){}
+        public virtual void Draw(Vector2 OFFSET, Vector2 ORIGIN){}
+
     }
 }

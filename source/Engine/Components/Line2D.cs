@@ -4,7 +4,7 @@ using Mars.Primitivies;
 
 namespace Mars.Components
 {    
-public class Line2D
+public class Line2D : Component
     {
         #region private Members
         // private Texture2D SimpleTexture; this is not used yet 
@@ -24,10 +24,11 @@ public class Line2D
 
             this.color = Color.Orange;
         }
-        public virtual void Draw(){
+        public override void Draw(Vector2 OFFSET){
             DrawPrimitive.DrawLineToPoint(Global.spriteBatch,this.fromPosition,this.toPosition,this.color,this.thickness);
         }
-        public virtual void Update(){
+
+        public override void Update(){
 
         }
     }

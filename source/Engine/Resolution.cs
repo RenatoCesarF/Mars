@@ -21,8 +21,8 @@ namespace Mars{
             PreviousWindowWidth = graphics.PreferredBackBufferWidth;
             PreviousWindowHeight = graphics.PreferredBackBufferHeight;
             WasResized = false;
-            GameWidth = 800;
-            GameHeight = 500;
+            GameWidth = 768;
+            GameHeight = 432;
             CalculateMatrix(graphics);
         }
         

@@ -11,12 +11,10 @@ namespace gameExample
     {
         private GraphicsAdapter adapter;
         private GraphicsProfile  graphicsProfile;
-        public static RigidBody2D square,square2;
-        private Line2D line;
-        private PresentationParameters  presentationParameters;
-        private Basic2D basic;
+        public World world;
 
-        public SpriteFont font;
+        private PresentationParameters  presentationParameters;
+
         
         public Game1(){
             this.Window.ClientSizeChanged += delegate { Resolution.WasResized = true; };
@@ -31,6 +29,7 @@ namespace gameExample
             graphicsProfile = new GraphicsProfile();
             presentationParameters =  new PresentationParameters();
 
+            #region Resolution stuff
             Resolution.Initialize(Global.graphics);
             Global.graphics.IsFullScreen = false;
             Global.graphics.PreferredBackBufferWidth = Resolution.GameWidth;
@@ -50,15 +49,12 @@ namespace gameExample
             Global.graphics.PreferredBackBufferHeight = Resolution.GameHeight;
 
             Global.graphics.ApplyChanges();
+            #endregion
             
             adapter = new GraphicsAdapter();
             Global.device = new GraphicsDevice(adapter,graphicsProfile,presentationParameters);
-
-            square = new RigidBody2D(this,new Vector2(10,50),Color.Orange, mass:0.2f);
-            square2 = new RigidBody2D(this,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);
-
-            basic = new Basic2D("sprite", new Vector2(400,250),new Vector2(100,100));
-            line = new Line2D( new Vector2(40,20), new Vector2(400,250));
+            Global.spriteFont = Content.Load<SpriteFont>("font");
+            world = new World(this);
 
             base.Initialize();
         }
@@ -66,22 +62,23 @@ namespace gameExample
         protected override void LoadContent(){
             base.LoadContent();
             Global.keyboard = new InputKeyboard();
+            Global.mouseControl = new MouseControl();
+            
             Global.content = this.Content;
             Global.spriteBatch = new SpriteBatch(GraphicsDevice);
-            font = Global.content.Load<SpriteFont>("font");
         }
         protected override void Update(GameTime gameTime){
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             Global.keyboard.Update();
+            Global.mouseControl.Update();
             
             Resolution.Update(this, Global.graphics);
 
-            square.Update();
-            square2.Update();
-            line.Update();
-            basic.Update();
+            world.Update();
+
             Global.keyboard.UpdateOld();
+            Global.mouseControl.UpdateOld();
 
       
             base.Update(gameTime);
@@ -91,14 +88,8 @@ namespace gameExample
             base.Draw(gameTime);
             GraphicsDevice.Clear(Color.PapayaWhip);
             Global.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
-
-           
-            line.Draw();
-            basic.Draw();
-            square.Draw();
-            square2.Draw();
-
-            Global.spriteBatch.DrawString(font,"This is a font", new Vector2(50,50),Color.Black);
+        
+            world.Draw(Vector2.Zero);
 
             Global.spriteBatch.End();
         }

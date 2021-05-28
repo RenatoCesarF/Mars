@@ -11,7 +11,7 @@ namespace Mars.Components
 
     class Basic2D : Component{
 
-        private Vector2  dimention,vector;
+        private Vector2  dimention,originVector;
         private Texture2D model;
         private SpriteEffects spriteEffect;
         private Rectangle rectangle;
@@ -25,13 +25,17 @@ namespace Mars.Components
 
             this.spriteEffect = new SpriteEffects();
             this.rectangle = new Rectangle((int)(position.X),(int)(position.Y), (int)(dimention.X),(int)(dimention.Y));
-            this.vector = new Vector2(model.Bounds.Width/2,model.Bounds.Height/2);
+            this.originVector = new Vector2(model.Bounds.Width/2,model.Bounds.Height/2);
         }   
-        public virtual void Draw( float customLayerDepth =0.0f){
+        public override void Draw(Vector2 OFFSET){
             if(model == null) return;
-            Global.spriteBatch.Draw(model, rectangle, null, Color.White,rotation,vector,spriteEffect,customLayerDepth);
+            Global.spriteBatch.Draw(model, rectangle, null, Color.White,rotation,originVector,spriteEffect,0);
         }
-        public virtual void Update(){
+        public override void Draw(Vector2 OFFSET,Vector2 ORIGIN){
+            if(model == null) return;
+            Global.spriteBatch.Draw(model, rectangle, null, Color.White,rotation,ORIGIN,spriteEffect,0);
+        }
+        public override void Update(){
         }
     }
 }

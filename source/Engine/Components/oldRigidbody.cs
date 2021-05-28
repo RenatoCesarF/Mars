@@ -50,7 +50,7 @@ namespace Mars.Components
             appliedForce /= mass;
             this.force += appliedForce;
         }
-        public virtual void Update(){
+        public override void Update(){
             keyboardReactionCheck();
             checkEdges();
             // applyForce(yForce:0.098f);
@@ -58,29 +58,12 @@ namespace Mars.Components
             this.force += this.aceleration * this.mass;
             this.position += this.force;
         }
-        private void checkEdges(){
-            if(this.position.Y >  Global.graphics.PreferredBackBufferHeight - 60){
-                this.position.Y =  Global.graphics.PreferredBackBufferHeight - 61;
-                this.force.Y *=-1 * this.mass;
-            }
-
-            if(this.position.X >= Global.graphics.PreferredBackBufferWidth - 20){
-                this.position.X = Global.graphics.PreferredBackBufferWidth - 20;
-                this.force.X *= -1 * this.mass;
-            }else if(this.position.X <=0){
-                this.position.X =0;
-                this.force.X *=-1 * this.mass;
-            }
-        }
-        public virtual void Draw(float customLayerDepth = 0){
-            // Global.spriteBatch.Draw(
-            //     whiteRectangle, new  Rectangle((int)(position.X),(int)(position.Y),width, height),this.rectColor);
-
+        public override void Draw(Vector2 OFFSET){
             Global.spriteBatch.Draw(
                 texture: whiteRectangle,
-                new  Rectangle((int)(position.X),(int)(position.Y),width, height),
+                new  Rectangle((int)(position.X - OFFSET.X),(int)(position.Y - OFFSET.Y),width, height),
                 null, this.rectColor,rotation,originVector,
-                SpriteEffects.None,customLayerDepth
+                SpriteEffects.None,0
             );
         }        
         public void keyboardReactionCheck(){
@@ -98,8 +81,19 @@ namespace Mars.Components
             }
         }
 
-        public Vector2 getPosition(){
-            return this.position;
+        private void checkEdges(){
+            if(this.position.Y >  Global.graphics.PreferredBackBufferHeight - 60){
+                this.position.Y =  Global.graphics.PreferredBackBufferHeight - 61;
+                this.force.Y *=-1 * this.mass;
+            }
+
+            if(this.position.X >= Global.graphics.PreferredBackBufferWidth - 20){
+                this.position.X = Global.graphics.PreferredBackBufferWidth - 20;
+                this.force.X *= -1 * this.mass;
+            }else if(this.position.X <=0){
+                this.position.X =0;
+                this.force.X *=-1 * this.mass;
+            }
         }
     }
 }
