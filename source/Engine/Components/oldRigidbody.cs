@@ -4,13 +4,15 @@ using System;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 
-namespace Mars{
-    public class RigidBody2D
+
+namespace Mars.Components
+{
+    public class RigidBody2D : Component
     {
         private Texture2D whiteRectangle;
-        private Vector2 position, force, aceleration,velocity;
+        private Vector2  force, aceleration;
         private Vector2 originVector;
-        private float mass, rotation = 0;
+        private float mass = 0;
         private int height, width;
         private Color rectColor;
 
@@ -30,7 +32,7 @@ namespace Mars{
             this.width = 50;
             this.aceleration = new Vector2(0,0);
             this.force = new Vector2(0,0);
-            whiteRectangle = new Texture2D(Game1.device, 1, 1);
+            whiteRectangle = new Texture2D(Global.device, 1, 1);
             whiteRectangle.SetData(new[] { Color.White });
             this.originVector = new Vector2(0.5f,0.5f);
             //TODO: add a texture or a based2d as a required argument

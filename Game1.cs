@@ -2,13 +2,13 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using Mars;
+using Mars.Components;
 
-
-namespace Mars
+namespace gameExample
 {
     public class Game1 : Game
     {
-        public static GraphicsDevice device;
         private GraphicsAdapter adapter;
         private GraphicsProfile  graphicsProfile;
         public static RigidBody2D square,square2;
@@ -52,7 +52,7 @@ namespace Mars
             Global.graphics.ApplyChanges();
             
             adapter = new GraphicsAdapter();
-            device = new GraphicsDevice(adapter,graphicsProfile,presentationParameters);
+            Global.device = new GraphicsDevice(adapter,graphicsProfile,presentationParameters);
 
             square = new RigidBody2D(this,new Vector2(10,50),Color.Orange, mass:0.2f);
             square2 = new RigidBody2D(this,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);

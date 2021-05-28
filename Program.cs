@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Mars
+namespace gameExample
 {
     public static class Program
     {

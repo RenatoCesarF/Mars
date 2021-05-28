@@ -1,14 +1,13 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Mars.Draw.DrawPrimitive;
+using Mars.Primitivies;
 
-namespace Mars
+namespace Mars.Components
 {    
 public class Line2D
     {
         #region private Members
-        private Texture2D SimpleTexture; 
-        private Rectangle rectangle;
+        // private Texture2D SimpleTexture; this is not used yet 
         private Vector2 fromPosition, toPosition;
         private Color color;
         private float thickness;
@@ -29,8 +28,7 @@ public class Line2D
             DrawPrimitive.DrawLineToPoint(Global.spriteBatch,this.fromPosition,this.toPosition,this.color,this.thickness);
         }
         public virtual void Update(){
-            this.fromPosition = Game1.square.getPosition();
-            this.toPosition = Game1.square2.getPosition();
+
         }
     }
 }

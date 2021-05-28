@@ -10,6 +10,7 @@ namespace Mars{
     ///</summary>
     class Global
     {
+        public static GraphicsDevice device;
         public static ContentManager content;
         public static GraphicsDeviceManager graphics;
         public static SpriteBatch spriteBatch;

@@ -163,3 +163,5 @@ C:\Users\refba\github\Rocket-Framework\obj\Debug\netcoreapp3.1\MyGame.pdb
 C:\Users\refba\github\Rocket-Framework\obj\Debug\netcoreapp3.1\MyGame.genruntimeconfig.cache
 C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\Content\font.xnb
 C:\Users\refba\github\LearningCSharp\bin\Debug\netcoreapp3.1\Content\pixelFont.ttf
+C:\Users\refba\github\Rocket-Framework\bin\Debug\netcoreapp3.1\Content\pixelFont.ttf
+C:\Users\refba\github\Rocket-Framework\bin\Debug\netcoreapp3.1\Content\font.xnb

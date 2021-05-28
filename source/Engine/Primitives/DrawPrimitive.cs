@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Mars.Draw.DrawPrimitive
+namespace Mars.Primitivies
 {
 		
 	public static class DrawPrimitive{

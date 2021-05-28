@@ -5,12 +5,13 @@ using Microsoft.Xna.Framework.Content;
 using System;
 
 
-namespace Mars{
 
-    class Basic2D{
+namespace Mars.Components
+{
 
-        private Vector2 position, dimention,vector;
-        private float rotation = 0.0f;
+    class Basic2D : Component{
+
+        private Vector2  dimention,vector;
         private Texture2D model;
         private SpriteEffects spriteEffect;
         private Rectangle rectangle;
