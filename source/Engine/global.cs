@@ -25,13 +25,19 @@ namespace Mars{
         public static GraphicsDeviceManager graphics;
         public static SpriteBatch spriteBatch;
         public static InputKeyboard keyboard;
-
-        public static SpriteFont spriteFont;
-
         public static MouseControl mouseControl;
 
-        public static float GetDistance(Vector2 pos, Vector2 target){
-            return (float)Math.Sqrt(Math.Pow(pos.X - target.X, 2) + Math.Pow(pos.Y - target.Y, 2));
+        public static SpriteFont spriteFont;
+        public static bool debugging = true;
+        public static GameTime gameTime;
+
+
+
+        ///<summary>
+        ///Return the distance between two vectors
+        ///<summary>
+        public static float GetDistance(Vector2 position, Vector2 target){
+            return (float)Math.Sqrt(Math.Pow(position.X - target.X, 2) + Math.Pow(position.Y - target.Y, 2));
         }
 
         public static float RotateTowards(Vector2 Pos, Vector2 focus)

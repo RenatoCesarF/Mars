@@ -17,7 +17,6 @@ public class Line2D : Component
         /// A game component line segment that receves, position, thikness and lenght
         ///</summary>
         public Line2D(Vector2 fromPosition , Vector2 toPosition, float thickness = 5){
-
             this.fromPosition = fromPosition;
             this.toPosition = toPosition;
             this.thickness = thickness;

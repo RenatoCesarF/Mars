@@ -70,6 +70,7 @@ namespace Mars.Components
             if(Global.keyboard.GetPress("W")){
                 applyForce(yForce: -0.05f);
             }
+
             if(Global.keyboard.GetPress("S")){
                 applyForce(yForce: 0.05f);
             }

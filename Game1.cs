@@ -11,6 +11,7 @@ namespace gameExample
     {
         private GraphicsAdapter adapter;
         private GraphicsProfile  graphicsProfile;
+        public MarsConsole console;
         public World world;
 
         private PresentationParameters  presentationParameters;
@@ -55,6 +56,7 @@ namespace gameExample
             Global.device = new GraphicsDevice(adapter,graphicsProfile,presentationParameters);
             Global.spriteFont = Content.Load<SpriteFont>("font");
             world = new World(this);
+            console = new MarsConsole();
 
             base.Initialize();
         }
@@ -70,13 +72,16 @@ namespace gameExample
         protected override void Update(GameTime gameTime){
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
+            Global.gameTime = gameTime;
             Global.keyboard.Update();
             Global.mouseControl.Update();
             
             Resolution.Update(this, Global.graphics);
 
             world.Update();
-
+            console.Update();
+            
             Global.keyboard.UpdateOld();
             Global.mouseControl.UpdateOld();
 
@@ -89,8 +94,8 @@ namespace gameExample
             GraphicsDevice.Clear(Color.PapayaWhip);
             Global.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
         
+            console.Draw();
             world.Draw(Vector2.Zero);
-
             Global.spriteBatch.End();
         }
     }
