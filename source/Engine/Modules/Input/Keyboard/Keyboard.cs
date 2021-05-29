@@ -7,13 +7,22 @@ namespace Mars
     {
 
         public KeyboardState newKeyboard, oldKeyboard;
+        private MarsTimer pressTimer;
+
 
         public List<InputKey> pressedKeys = new List<InputKey>(), previousPressedKeys = new List<InputKey>();
 
         public InputKeyboard(){
+            pressTimer = new MarsTimer(130);
         }
 
         public virtual void Update(){
+            pressTimer.UpdateTimer();
+            
+            if(!pressTimer.hasFinished()){ return;}
+
+            pressTimer.ResetToZero();
+
             newKeyboard = Keyboard.GetState();
             GetPressedKeys();
         }

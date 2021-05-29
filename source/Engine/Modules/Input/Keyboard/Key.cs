@@ -6,22 +6,21 @@ namespace Mars
         public int state;
         public string key, print, display;
         
-        public InputKey(string KEY, int STATE)
-        {
+        public InputKey(string KEY, int STATE){
             key = KEY;
             state = STATE;
             MakePrint(key);
         }
 
-        public virtual void Update()
-        {
+        public virtual void Update(){
             state = 2;
-
         }
 
 
         public void MakePrint(string KEY)
         {
+
+
             display = KEY;
             Global.console.print(display);;
             string tempStr = "";

@@ -7,7 +7,7 @@ namespace Mars{
     public class MarsConsole{   
         private List<ConsoleMessage> messages;
         private float consoleWidthPosition = 10;
-        private float consoleHeightPosition = 330;
+        private float consoleHeightPosition = 345;
         private Vector2[] positions;
 
         ///<summary>
@@ -18,7 +18,7 @@ namespace Mars{
 
             for(int i = 0; i< totalOfMessages; i++){
                 positions[i] = new Vector2(this.consoleWidthPosition, consoleHeightPosition);
-                consoleHeightPosition += 20;
+                consoleHeightPosition += 18;
             }
             messages = new List<ConsoleMessage>(totalOfMessages);
             messages.Reverse();
@@ -48,7 +48,7 @@ namespace Mars{
             Texture2D pixel = new Texture2D(Global.spriteBatch.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
 			pixel.SetData(new[]{ Color.White });
 
-            Global.spriteBatch.Draw(pixel,new Rectangle(0,320,150,150),null,new Color(0,0,0,140),0,Vector2.Zero,SpriteEffects.None,0);
+            Global.spriteBatch.Draw(pixel,new Rectangle(0,340,150,150),null,new Color(0,0,0,140),0,Vector2.Zero,SpriteEffects.None,0);
 
             foreach (ConsoleMessage mss in messages){
                 mss.Draw();
