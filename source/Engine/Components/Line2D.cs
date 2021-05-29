@@ -28,7 +28,6 @@ public class Line2D : Component
         }
 
         public override void Update(){
-
         }
     }
 }

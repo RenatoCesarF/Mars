@@ -1,1 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/refba/github/Rocket-Framework/Content/font.spritefont","C:/Users/refba/github/Rocket-Framework/Content/bin/DesktopGL/Content/font.xnb","FontDescriptionProcessor","SpriteFontContent",2072,37922,0,312617
+"C:/Users/refba/github/Rocket-Framework/Content/sprite.png","C:/Users/refba/github/Rocket-Framework/Content/bin/DesktopGL/Content/sprite.xnb","TextureProcessor","Texture2DContent",124,341,0,0159851

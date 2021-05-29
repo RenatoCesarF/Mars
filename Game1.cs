@@ -54,9 +54,8 @@ namespace gameExample
             
             adapter = new GraphicsAdapter();
             Global.device = new GraphicsDevice(adapter,graphicsProfile,presentationParameters);
-            Global.spriteFont = Content.Load<SpriteFont>("font");
+            Global.console = new MarsConsole(5);
             world = new World(this);
-            console = new MarsConsole();
 
             base.Initialize();
         }
@@ -65,22 +64,31 @@ namespace gameExample
             base.LoadContent();
             Global.keyboard = new InputKeyboard();
             Global.mouseControl = new MouseControl();
+            Global.spriteFont = Content.Load<SpriteFont>("font");
             
             Global.content = this.Content;
             Global.spriteBatch = new SpriteBatch(GraphicsDevice);
         }
         protected override void Update(GameTime gameTime){
+            
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
             Global.gameTime = gameTime;
             Global.keyboard.Update();
             Global.mouseControl.Update();
+
+            if(Global.keyboard.GetPress("Insert")){
+                Global.debugging = true;
+            }
+            if(Global.keyboard.GetPress("Home")){
+                Global.debugging = false;
+            }
             
             Resolution.Update(this, Global.graphics);
 
             world.Update();
-            console.Update();
+            Global.console.Update();
             
             Global.keyboard.UpdateOld();
             Global.mouseControl.UpdateOld();
@@ -94,8 +102,8 @@ namespace gameExample
             GraphicsDevice.Clear(Color.PapayaWhip);
             Global.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
         
-            console.Draw();
             world.Draw(Vector2.Zero);
+            Global.console.Draw();
             Global.spriteBatch.End();
         }
     }

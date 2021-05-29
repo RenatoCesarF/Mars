@@ -69,6 +69,7 @@ namespace Mars.Components
         public void keyboardReactionCheck(){
             if(Global.keyboard.GetPress("W")){
                 applyForce(yForce: -0.05f);
+                
             }
 
             if(Global.keyboard.GetPress("S")){

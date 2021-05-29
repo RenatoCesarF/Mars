@@ -26,10 +26,10 @@ namespace Mars{
         public static SpriteBatch spriteBatch;
         public static InputKeyboard keyboard;
         public static MouseControl mouseControl;
-
         public static SpriteFont spriteFont;
         public static bool debugging = true;
         public static GameTime gameTime;
+        public static MarsConsole console;
 
 
 
@@ -39,7 +39,9 @@ namespace Mars{
         public static float GetDistance(Vector2 position, Vector2 target){
             return (float)Math.Sqrt(Math.Pow(position.X - target.X, 2) + Math.Pow(position.Y - target.Y, 2));
         }
+        public static void test(){
 
+        }
         public static float RotateTowards(Vector2 Pos, Vector2 focus)
         {
 

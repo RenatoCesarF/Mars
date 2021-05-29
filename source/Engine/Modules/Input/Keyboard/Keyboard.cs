@@ -10,26 +10,20 @@ namespace Mars
 
         public List<InputKey> pressedKeys = new List<InputKey>(), previousPressedKeys = new List<InputKey>();
 
-        public InputKeyboard()
-        {
-
+        public InputKeyboard(){
         }
 
-        public virtual void Update()
-        {
+        public virtual void Update(){
             newKeyboard = Keyboard.GetState();
-
             GetPressedKeys();
-
         }
 
-        public void UpdateOld()
-        {
+        public void UpdateOld(){
             oldKeyboard = newKeyboard;
 
             previousPressedKeys = new List<InputKey>();
-            for(int i=0;i<pressedKeys.Count;i++)
-            {
+
+            for(int i=0;i<pressedKeys.Count;i++){
                 previousPressedKeys.Add(pressedKeys[i]);
             }
         }
@@ -37,18 +31,13 @@ namespace Mars
 
         public bool GetPress(string KEY)
         {
-
             for(int i=0;i<pressedKeys.Count;i++)
             {
-
                 if(pressedKeys[i].key == KEY)
                 {
                     return true;
                 }
-
             }
-            
-
             return false;
         }
 
@@ -60,9 +49,7 @@ namespace Mars
             pressedKeys.Clear();
             for(int i=0; i<newKeyboard.GetPressedKeys().Length; i++)
             {
-
-                    pressedKeys.Add(new InputKey(newKeyboard.GetPressedKeys()[i].ToString(), 1));
-  
+                pressedKeys.Add(new InputKey(newKeyboard.GetPressedKeys()[i].ToString(), 1));
             }
         }
 
