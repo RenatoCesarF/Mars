@@ -4,27 +4,26 @@ using Mars.Primitivies;
 
 namespace Mars.Components
 {    
-public class CompLine2D : Component
+public class Line2D : Component
     {
         #region private Members
         // private Texture2D SimpleTexture; this is not used yet 
-        public Vector2 fromPosition, toPosition;
+        public LineSegment line;
         private Color color;
         private float thickness;
         #endregion
         
         ///<summary>
-        /// A game component line segment that receves, position, thikness and lenght
+        /// A game component line segment that receves a primitive line segment
         ///</summary>
-        public CompLine2D(Vector2 fromPosition , Vector2 toPosition, float thickness = 5){
-            this.fromPosition = fromPosition;
-            this.toPosition = toPosition;
+        public Line2D(LineSegment line, float thickness = 5){
+            this.line = line;
             this.thickness = thickness;
 
             this.color = Color.Orange;
         }
         public override void Draw(Vector2 OFFSET){
-            DrawPrimitive.DrawLineToPoint(Global.spriteBatch,this.fromPosition,this.toPosition,this.color,this.thickness);
+            DrawPrimitive.DrawLineToPoint(Global.spriteBatch,line.from, line.to,this.color,this.thickness);
         }
 
         public override void Update(){

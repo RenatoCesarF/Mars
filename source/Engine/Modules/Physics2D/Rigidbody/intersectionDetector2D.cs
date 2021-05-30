@@ -12,7 +12,7 @@ namespace Mars
 
         ///<summary>
         ///</summary>
-        public static bool pointOnLine(Vector2 point, Line2D line){
+        public static bool pointOnLine(Vector2 point, LineSegment line){
             float d1 = Global.GetDistance(point,line.getStart());
             float d2 = Global.GetDistance(point,line.getEnd());
 

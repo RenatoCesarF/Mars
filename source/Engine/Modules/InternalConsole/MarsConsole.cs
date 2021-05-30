@@ -43,7 +43,7 @@ namespace Mars{
         }
 
         public void Draw(){
-            if(!Global.debugging) return; 
+            if(!Global.debugging) return;
 
             Texture2D pixel = new Texture2D(Global.spriteBatch.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
 			pixel.SetData(new[]{ Color.White });

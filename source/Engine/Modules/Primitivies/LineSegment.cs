@@ -8,20 +8,25 @@ using Microsoft.Xna.Framework.Content;
 
 namespace Mars.Primitivies
 {
-    public class Line2D
+    public class LineSegment
     {
         public Vector2 from {get; set;}
         public Vector2 to   {get; set;}
         private int lifetime   {get; set;}      
         private Color color;
 
-        public Line2D(Vector2 from, Vector2 to, Color color, int lifetime){
+        ///<summary>
+        ///A component that store Line informations
+        ///<param name="from"> Where the line starts</param>
+        ///<param name="to"> Where the line ends</param>
+        ///</summary>
+        public LineSegment(Vector2 from, Vector2 to, Color color, int lifetime){
             this.from = from;
             this.to = to;
             this.color = color;
             this.lifetime = lifetime;
         }
-        public Line2D(Vector2 from, Vector2 to){
+        public LineSegment(Vector2 from, Vector2 to){
             this.from = from;
             this.to = to;
         }
