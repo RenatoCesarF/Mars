@@ -89,10 +89,6 @@ namespace gameExample
             Resolution.Update(this, Global.graphics);
 
             world.Update();
-            Vector2 mousePos =  new Vector2(Global.mouseControl.newMouse.X,Global.mouseControl.newMouse.Y);
-
-
-       
             
             Global.console.Update();
             Global.keyboard.UpdateOld();

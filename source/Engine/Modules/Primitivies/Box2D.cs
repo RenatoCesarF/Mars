@@ -1,9 +1,9 @@
 using Microsoft.Xna.Framework;
 
-namespace Name
+namespace Mars
 {
     
-    class Box2D
+    public class Box2D
     {
         private Vector2 size = new Vector2();
         private Vector2 halfSize = new Vector2();
@@ -45,6 +45,9 @@ namespace Name
                 }
             }
             return verteces;
+        }
+        public Rigidbody2D getRigidbody2D(){
+            return this.rigidBody;
         }
     }
 
