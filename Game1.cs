@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using Mars;
+using Mars.Primitivies;
 using Mars.Components;
 
 namespace gameExample
@@ -88,8 +89,12 @@ namespace gameExample
             Resolution.Update(this, Global.graphics);
 
             world.Update();
-            Global.console.Update();
+            Vector2 mousePos =  new Vector2(Global.mouseControl.newMouse.X,Global.mouseControl.newMouse.Y);
+
+
+       
             
+            Global.console.Update();
             Global.keyboard.UpdateOld();
             Global.mouseControl.UpdateOld();
 

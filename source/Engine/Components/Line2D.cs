@@ -4,11 +4,11 @@ using Mars.Primitivies;
 
 namespace Mars.Components
 {    
-public class Line2D : Component
+public class CompLine2D : Component
     {
         #region private Members
         // private Texture2D SimpleTexture; this is not used yet 
-        private Vector2 fromPosition, toPosition;
+        public Vector2 fromPosition, toPosition;
         private Color color;
         private float thickness;
         #endregion
@@ -16,7 +16,7 @@ public class Line2D : Component
         ///<summary>
         /// A game component line segment that receves, position, thikness and lenght
         ///</summary>
-        public Line2D(Vector2 fromPosition , Vector2 toPosition, float thickness = 5){
+        public CompLine2D(Vector2 fromPosition , Vector2 toPosition, float thickness = 5){
             this.fromPosition = fromPosition;
             this.toPosition = toPosition;
             this.thickness = thickness;

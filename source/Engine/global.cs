@@ -32,16 +32,13 @@ namespace Mars{
         public static MarsConsole console;
 
 
-
         ///<summary>
         ///Return the distance between two vectors
         ///<summary>
         public static float GetDistance(Vector2 position, Vector2 target){
             return (float)Math.Sqrt(Math.Pow(position.X - target.X, 2) + Math.Pow(position.Y - target.Y, 2));
         }
-        public static void test(){
 
-        }
         public static float RotateTowards(Vector2 Pos, Vector2 focus)
         {
 
