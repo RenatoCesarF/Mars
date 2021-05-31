@@ -1,2 +1,8 @@
 *.vscode
 *.cache
+./bin/Debug
+Content/obj/DesktopGL/Content/.mgcontent
+Content/obj/DesktopGL/Content/.mgstats
+Content/obj/DesktopGL/Content/font.mgcontent
+Content/obj/DesktopGL/Content/sprite.mgcontent
+obj/Debug/netcoreapp3.1/apphost.exe
