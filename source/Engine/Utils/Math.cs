@@ -5,18 +5,20 @@ namespace Mars
     
     public class MarsMath
     {
-        public static void rotate(Vector2 vector, float anglesDegrees, Vector2 origin){
+        public static Vector2 rotate(Vector2 vector, float anglesDegrees, Vector2 origin){
             float x = vector.X - origin.X;
             float y = vector.Y - origin.Y;
 
             float cos = (float)(Math.Cos((Math.PI / 180) * anglesDegrees));
             float sin = (float)(Math.Sin((Math.PI / 180) * anglesDegrees));
-
+            
             float xPrime = (x * cos) - (y * sin);
-            float yPrime = (x * sin) - (y * cos);
+            float yPrime = (x * sin) + (y * cos);
 
-            vector.X = xPrime;
-            vector.Y = yPrime;
+            xPrime += origin.X;
+            yPrime += origin.Y;
+            
+            return new Vector2(xPrime,yPrime);
         }
 
         public static bool compare(float x, float y, float epsilon = float.MinValue){

@@ -33,5 +33,8 @@ namespace Mars
             Global.spriteBatch.Draw(pixel,this.getMax(),null,Color.Blue,0,new Vector2(0.5f,0.5f),new Vector2(10,10),Microsoft.Xna.Framework.Graphics.SpriteEffects.None,0);
 
         }
+
+        public Vector2 getSize() => this.size;
+
     }
 }

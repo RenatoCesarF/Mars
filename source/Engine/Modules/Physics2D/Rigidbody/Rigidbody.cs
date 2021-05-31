@@ -7,6 +7,7 @@ public class Rigidbody2D
 
     public Rigidbody2D(Vector2 position){
         this.position = position;
+        this.rotation = 0.0f;
     }    
     public void setPosition(Vector2 position){
         this.position = position;
