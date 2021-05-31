@@ -1,11 +1,13 @@
 using Microsoft.Xna.Framework;
 using Mars.Primitivies;
+using System;
 
 namespace Mars
 {
     public class intersectionDetector2D{
 
 
+        #region Point Colision
         ///<summary>
         ///</summary>
         public static bool pointOnLine(Vector2 point, LineSegment line){
@@ -48,6 +50,82 @@ namespace Mars
             return pointInBoxSpace.X <= max.X && min.X <= pointInBoxSpace.X &&
                     pointInBoxSpace.Y <= max.Y && min.Y <= pointInBoxSpace.Y;
         }
+
+        #endregion
+        
+        #region Line Colision
+        public static bool lineInCircle(LineSegment line, Circle circle){
+            if(pointInCircle(line.getStart(), circle) || pointInCircle(line.getEnd(), circle)){
+                return true;
+            }
+            Vector2 lineSegment = new Vector2(line.getEnd().X - line.getStart().X,line.getEnd().Y - line.getStart().Y);
+            Vector2 circleCenter = new Vector2(circle.getCenter().X,circle.getCenter().Y);
+            Vector2 centerToLineStart = new Vector2( circleCenter.X - line.getStart().X, circleCenter.Y - line.getStart().Y);
+            float t = (centerToLineStart.X * lineSegment.X +centerToLineStart.Y* lineSegment.Y) / (lineSegment.X * lineSegment.X +lineSegment.Y* lineSegment.Y);
+
+            if(t < 0.0f || t>= 1.0f){
+                return false;
+            }
+
+            Vector2 closestPoint =  line.getStart()+lineSegment * t;
+
+            return pointInCircle(closestPoint,circle);
+        }    
+       
+        public static bool lineInLine(LineSegment line1, LineSegment line2){
+            float end_X_line2_sub_start_X_line2 = line2.getEnd().X - line2.getStart().X;
+            float start_Y_line1_sub_end_Y_line2 = line1.getStart().Y - line2.getStart().Y;
+            float end_X_line1_sub_start_X_line1 = line1.getEnd().X - line1.getStart().X;
+            float end_Y_line2_sub_start_Y_line2 = line2.getEnd().Y - line2.getStart().Y;
+            float start_X_line1_sub_start_X_line2 = line1.getStart().X - line2.getStart().X;
+            float end_Y_line1_sub_start_Y_line1 = line1.getEnd().Y - line1.getStart().Y;
+
+            float uA =  ((end_X_line2_sub_start_X_line2)*(start_Y_line1_sub_end_Y_line2) -
+                         (end_Y_line2_sub_start_Y_line2)*(start_X_line1_sub_start_X_line2)) /
+                        ((end_Y_line2_sub_start_Y_line2)*(end_X_line1_sub_start_X_line1) - 
+                            (end_X_line2_sub_start_X_line2)*(end_Y_line1_sub_start_Y_line1));
+
+            float uB = ((end_X_line1_sub_start_X_line1)*(start_Y_line1_sub_end_Y_line2) - 
+                        (end_Y_line1_sub_start_Y_line1)*(start_X_line1_sub_start_X_line2)) / 
+                        ((end_Y_line2_sub_start_Y_line2)*(end_X_line1_sub_start_X_line1) - 
+                        (end_X_line2_sub_start_X_line2)*(end_Y_line1_sub_start_Y_line1));
+
+            // if uA and uB are between 0-1, lines are colliding
+            if (uA >= 0 && uA <= 1 && uB >= 0 && uB <= 1) {
+                return true;
+            }
+            return false;
+        }
+        public static bool lineInAABB(LineSegment line, AABB box){
+            if(pointInAABB(line.getStart(), box) || pointInAABB(line.getEnd(), box)){
+                return true;
+            }
+
+            Vector2 uniVector = new Vector2(line.getEnd().X - line.getStart().X,line.getEnd().Y - line.getStart().Y);
+            uniVector.Normalize();
+            uniVector.X = (uniVector.X != 0)? 1.0f /uniVector.X: 0f; 
+            uniVector.X = (uniVector.Y != 0)? 1.0f /uniVector.Y: 0f; 
+
+            Vector2 min = box.getMin();
+            Vector2 max = box.getMax();
+
+            min = min - line.getStart() * uniVector;
+            max = min - line.getStart() * uniVector;
+
+            float trueMin = Math.Max(Math.Min(min.X, max.X), Math.Min(min.Y, max.Y));
+            float trueMax = Math.Min(Math.Max(min.X, max.X), Math.Max(min.Y, max.Y));
+
+            if(trueMax < 0 || trueMin > trueMax){
+                return false;
+            }
+
+            float t = (trueMin< 0)? trueMax : trueMin;
+            return t > 0f && t * t < line.lenghtSquared();
+        }
+        
+        
+        
+        #endregion
     }
 
 }

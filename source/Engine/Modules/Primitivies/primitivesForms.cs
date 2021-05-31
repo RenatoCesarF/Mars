@@ -431,6 +431,11 @@ public static class Primitives2D
 
 
 		#region DrawCircle
+		public static void DrawCircleByCircle(this SpriteBatch spriteBatch, Circle circle, Color color)
+		{
+			DrawPoints(spriteBatch, circle.getCenter(), CreateCircle(circle.getRadius(), 1000), color, 1.0f);
+		}
+
 
 		/// <summary>
 		/// Draw a circle

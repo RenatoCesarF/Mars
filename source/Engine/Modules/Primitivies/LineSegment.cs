@@ -38,5 +38,10 @@ namespace Mars.Primitivies
         public Vector2 getEnd(){
             return this.to;
         }
+
+        public float lenghtSquared(){
+            float lenght = Global.GetDistance(to,from);
+            return lenght * lenght;
+        }
     }
 }

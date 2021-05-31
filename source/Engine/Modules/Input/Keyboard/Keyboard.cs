@@ -19,7 +19,8 @@ namespace Mars
         public virtual void Update(){
             pressTimer.UpdateTimer();
             
-            if(!pressTimer.hasFinished()){ return;}
+            //if(!pressTimer.hasFinished()){ return;}
+
 
             pressTimer.ResetToZero();
 
@@ -39,7 +40,7 @@ namespace Mars
 
 
         public bool GetPress(string KEY)
-        {
+{
             for(int i=0;i<pressedKeys.Count;i++)
             {
                 if(pressedKeys[i].key == KEY)

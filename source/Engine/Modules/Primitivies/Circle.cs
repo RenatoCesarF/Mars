@@ -9,8 +9,9 @@ namespace Mars{
         private Rigidbody2D body = null; 
         public Vector2 position;
 
-        public Circle(){
-            
+        public Circle(Rigidbody2D body ,float radius = 5){
+            this.body = body;
+            this.radius = radius;
         }
 
         public float getRadius(){
@@ -18,6 +19,15 @@ namespace Mars{
         }
         public Vector2 getCenter(){
             return body.getPosition();
+        }
+
+        public void Draw(){
+            if(!Global.debugging){
+                return;
+            }
+            
+
+            Primitives2D.DrawCircle(Global.spriteBatch, this.getCenter(),this.radius,1000,Color.BlueViolet,10);
         }
         
     }

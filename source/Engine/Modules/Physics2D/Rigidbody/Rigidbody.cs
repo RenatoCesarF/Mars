@@ -4,7 +4,10 @@ public class Rigidbody2D
 {
     private Vector2 position = new Vector2();
     private float rotation = 0.0f;
-    
+
+    public Rigidbody2D(Vector2 position){
+        this.position = position;
+    }    
     public void setPosition(Vector2 position){
         this.position = position;
     }

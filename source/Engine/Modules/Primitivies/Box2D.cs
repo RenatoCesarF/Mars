@@ -41,7 +41,7 @@ namespace Mars
             };
             if (rigidBody.getRotation() != 0.0f){
                 foreach(Vector2 vert in verteces){
-                    //rotate
+                //    MarsMath.rotate(this.;)
                 }
             }
             return verteces;

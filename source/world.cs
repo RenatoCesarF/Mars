@@ -6,42 +6,47 @@ using System.Collections.Generic;
 namespace Mars{
     public class World{
         public Line2D line;
-        public static RigidBody2D square,square2;
-        private Basic2D basic;
+        // public static RigidBody2D square,square2;
         public List<Component> entities;
+        public Line2D LL;
 
         public World(Game game){
             entities = new List<Component>();
+            // square = new RigidBody2D(game,new Vector2(10,50),Color.Orange, mass:0.2f);
+            // entities.Add(square);
 
-            square = new RigidBody2D(game,new Vector2(10,50),Color.Orange, mass:0.2f);
-            entities.Add(square);
+            // square2 = new RigidBody2D(game,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);
+            // entities.Add(square2);
 
-            square2 = new RigidBody2D(game,new Vector2(10,10), Color.CornflowerBlue, mass:0.5f);
-            entities.Add(square2);
-
-            basic = new Basic2D("sprite", new Vector2(100,30),new Vector2(100,100));
-            entities.Add(basic);
-            
-            line = new Line2D( new LineSegment(new Vector2(40,20), new Vector2(40,250)));
+            line = new Line2D( new LineSegment(new Vector2(600,00), new Vector2(40,250)));
             entities.Add(line);
+
+
+            LL = new Line2D(line:new LineSegment(new Vector2(300,400) ,new Vector2(500,200)));
+            
+          
+      
         }
         public virtual void Update(){
-            foreach (Component entity in entities)
-            {
-                entity.Update();
+            // foreach (Component entity in entities)
+            // {
+            //     entity.Update();
+            // }
+            line.Update();
+            line.lineSegment.from = Global.mouseControl.getMousePosition();
+
+            if(intersectionDetector2D.lineInLine(line.lineSegment,LL.lineSegment)){
+                Global.console.print("FUNFA");
             }
-
-            Vector2 mousePos =  new Vector2(Global.mouseControl.newMouse.X,Global.mouseControl.newMouse.Y);
-
-            // if(intersectionDetector2D.pointOnCircle(mousePos,new Circle()));
+            else{
+                Global.console.print("Nao colide");
+            }
         }
         public virtual void Draw(Vector2 OFFSET){
-            foreach (Component entity in entities)
-            {
+            foreach (Component entity in entities){
                 entity.Draw(OFFSET);
             }
-            Mars.Primitivies.Primitives2D.DrawCircle(Global.spriteBatch,new Vector2(200,200),
-            60,1000,Color.Blue,5);
+            LL.Draw(OFFSET);
         }
     }
 }

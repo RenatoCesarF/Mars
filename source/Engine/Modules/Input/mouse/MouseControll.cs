@@ -180,5 +180,8 @@ namespace Mars
         {
 
         }
+        public  Vector2 getMousePosition(){
+            return newMousePos;
+        }
     }
 }
