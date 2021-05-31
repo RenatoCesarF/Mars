@@ -411,19 +411,12 @@ public static class Primitives2D
 
 		#region PutPixel
 
-		public static void PutPixel(this SpriteBatch spriteBatch, float x, float y, Color color)
-		{
-			PutPixel(spriteBatch, new Vector2(x, y), color);
-		}
-
-
-		public static void PutPixel(this SpriteBatch spriteBatch, Vector2 position, Color color)
+		public static void PutPixel( SpriteBatch spriteBatch, Vector2 position, Color color)
 		{
 			if (pixel == null)
 			{
 				CreateThePixel(spriteBatch);
 			}
-
 			spriteBatch.Draw(pixel, position, color);
 		}
 

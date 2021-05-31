@@ -40,8 +40,10 @@ namespace Mars.Primitivies
         }
 
         public float lenghtSquared(){
-            float lenght = Global.GetDistance(to,from);
-            return lenght * lenght;
+            // Vector2 result = to - from;
+            // return result.LengthSquared();
+            float result = to.LengthSquared() - from.LengthSquared();
+            return result;
         }
     }
 }

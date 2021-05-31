@@ -14,7 +14,6 @@ namespace Mars
             float d1 = Global.GetDistance(point,line.getStart());
             float d2 = Global.GetDistance(point,line.getEnd());
 
-
             float lineLen = Global.GetDistance(line.getStart(),line.getEnd());
 
           
@@ -100,27 +99,42 @@ namespace Mars
             if(pointInAABB(line.getStart(), box) || pointInAABB(line.getEnd(), box)){
                 return true;
             }
-
-            Vector2 uniVector = new Vector2(line.getEnd().X - line.getStart().X,line.getEnd().Y - line.getStart().Y);
+            
+            Vector2 uniVector = line.getEnd() - line.getStart();
             uniVector.Normalize();
-            uniVector.X = (uniVector.X != 0)? 1.0f /uniVector.X: 0f; 
-            uniVector.X = (uniVector.Y != 0)? 1.0f /uniVector.Y: 0f; 
+            uniVector.X = (uniVector.X != 0) ? 1.0f / uniVector.X : 0f;
+            uniVector.Y = (uniVector.Y != 0) ? 1.0f / uniVector.Y : 0f;
 
+            //
             Vector2 min = box.getMin();
-            Vector2 max = box.getMax();
-
             min = min - line.getStart() * uniVector;
-            max = min - line.getStart() * uniVector;
+            Vector2 max = box.getMax();
+            max = max - line.getStart() * uniVector;
 
-            float trueMin = Math.Max(Math.Min(min.X, max.X), Math.Min(min.Y, max.Y));
-            float trueMax = Math.Min(Math.Max(min.X, max.X), Math.Max(min.Y, max.Y));
-
-            if(trueMax < 0 || trueMin > trueMax){
+            float tmin = Math.Max(Math.Min(min.X, max.Y), Math.Min(min.Y, max.Y));
+            float tmax = Math.Min(Math.Max(min.X, max.Y), Math.Max(min.Y, max.Y));
+            
+            if (tmax < 0 || tmin > tmax) {
                 return false;
             }
 
-            float t = (trueMin< 0)? trueMax : trueMin;
+            float t = (tmin < 0f) ? tmax : tmin;
             return t > 0f && t * t < line.lenghtSquared();
+        }
+        public static bool lineInBox2D(LineSegment line, Box2D box){
+            float theta = - box.getRigidbody2D().getRotation();
+            Vector2 center = box.getRigidbody2D().getPosition();
+
+            Vector2 localStart = line.getStart();
+            Vector2 localEnd = line.getEnd();
+            
+            MarsMath.rotate(localStart,theta,center);
+            MarsMath.rotate(localEnd,theta,center);
+
+            AABB aabb = new AABB(box.size,box.getRigidbody2D().getPosition());
+            LineSegment localLine = new LineSegment(localStart,localEnd);
+
+            return lineInAABB(localLine,aabb);
         }
         
         

@@ -5,11 +5,11 @@ namespace Mars
     
     public class Box2D
     {
-        private Vector2 size = new Vector2();
+        public Vector2 size = new Vector2();
         private Vector2 halfSize = new Vector2();
         private Rigidbody2D rigidBody = null;
         
-        public Box2D(){
+        public Box2D(Vector2 size){
             this.halfSize = size/2;
         }
         public Box2D(Vector2 min, Vector2 max){
@@ -20,14 +20,14 @@ namespace Mars
 
         public Vector2 getMin(){
             return new Vector2(
-                this.rigidBody.getPosition().X - this.halfSize.X/2,
-                this.rigidBody.getPosition().Y - this.halfSize.Y/2
+                this.rigidBody.getPosition().X - this.halfSize.X,
+                this.rigidBody.getPosition().Y - this.halfSize.Y
             );
         }
         public Vector2 getMax(){
             return new Vector2(
-                this.rigidBody.getPosition().X + this.halfSize.X/2,
-                this.rigidBody.getPosition().Y + this.halfSize.Y/2
+                this.rigidBody.getPosition().X + this.halfSize.X,
+                this.rigidBody.getPosition().Y + this.halfSize.Y
             );
         }
     

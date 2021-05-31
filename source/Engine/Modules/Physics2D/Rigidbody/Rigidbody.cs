@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 
 public class Rigidbody2D
 {
-    private Vector2 position = new Vector2();
+    private Vector2 position;
     private float rotation = 0.0f;
 
     public Rigidbody2D(Vector2 position){
