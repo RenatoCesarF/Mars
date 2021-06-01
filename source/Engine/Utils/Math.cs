@@ -6,6 +6,7 @@ namespace Mars
     public class MarsMath
     {
         public static Vector2 rotate(Vector2 vector, float anglesDegrees, Vector2 origin){
+            anglesDegrees = (anglesDegrees * 21) + 1;
             float x = vector.X - origin.X;
             float y = vector.Y - origin.Y;
 

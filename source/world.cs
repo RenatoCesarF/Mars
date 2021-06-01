@@ -6,30 +6,32 @@ using System.Collections.Generic;
 
 namespace Mars{
     public class World{
-        public Line2D line;
-        // public static RigidBody2D square,square2;
+        public Line2D line,laaa;
         public List<Component> entities;
-        public Box2D LL;
+        public Box2D box;
         public World(Game game){
             entities = new List<Component>();
-        
 
             line = new Line2D( new LineSegment(Vector2.Zero, new Vector2(500,500)));
-            entities.Add(line);
+            box = new Box2D(new Vector2(100,200),new Vector2(500,200));
 
-            LL = new Box2D(new Vector2(100,200),new Vector2(500,200));
+            // laaa = new Line2D(new LineSegment( new Vector2(450,100),new Vector2(450,500)));
+            // laaa.lineSegment.from = MarsMath.rotate( laaa.lineSegment.getStart(), rotate,box.getRigidbody2D().getPosition());
+            // laaa.lineSegment.to  =  MarsMath.rotate( laaa.lineSegment.getEnd(), rotate,box.getRigidbody2D().getPosition());
+            
         }
         public virtual void Update(){
             line.Update();
             line.lineSegment.to = Global.mouseControl.getMousePosition();
 
-            LL.getRigidbody2D().setRotation(0.5f);
+            box.getRigidbody2D().setRotation(5);
 
+         
             if(Global.keyboard.GetPress("Space")){
                 line.lineSegment.from = Global.mouseControl.getMousePosition();
             }
 
-            if(intersectionDetector2D.pointInBox2D(Global.mouseControl.getMousePosition(),LL)){
+            if(intersectionDetector2D.pointInBox2D(Global.mouseControl.getMousePosition(),box)){
                 Global.console.print("FUNFA");
                 return;
             }
@@ -37,21 +39,19 @@ namespace Mars{
 
         }
         public virtual void Draw(Vector2 OFFSET){
-            foreach (Component entity in entities){
-                entity.Draw(OFFSET);
-            }
-            LL.Draw();
-            Box2D box = LL;
-            Vector2 center = box.getRigidbody2D().getPosition();
+            box.Draw();
+               
+            line.Draw(OFFSET);
+           
+            // laaa.Draw(OFFSET);
+           
+            
+            LineSegment a = new LineSegment( line.lineSegment.from, line.lineSegment.to);  
+            a.from =  MarsMath.rotate(a.getStart(),box.getRigidbody2D().getRotation(),box.getRigidbody2D().getPosition());
+            a.to = MarsMath.rotate(a.getEnd(),box.getRigidbody2D().getRotation(),box.getRigidbody2D().getPosition());
+            Line2D dd = new Line2D(a,8);
 
-            Vector2 rotatedStartLine = MarsMath.rotate(line.lineSegment.getStart(),- box.getRigidbody2D().getRotation(),center);
-            Vector2 rotatedEndLine = MarsMath.rotate(line.lineSegment.getEnd(),-box.getRigidbody2D().getRotation(),center);
-
-            AABB aabb = new AABB(box.size,box.getRigidbody2D().getPosition());
-            LineSegment localRotatedLine = new LineSegment(rotatedStartLine,rotatedEndLine);
-            Line2D rotatedL = new Line2D(localRotatedLine);
-            rotatedL.Draw(OFFSET);
-
+            dd.Draw(OFFSET);
         }
     }
 }
