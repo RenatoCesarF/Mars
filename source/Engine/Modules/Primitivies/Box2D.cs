@@ -8,7 +8,7 @@ namespace Mars
     {
         public Vector2 size;
         private Vector2 halfSize;
-        private Rigidbody2D rigidBody = null;
+        private Rigidbody2D rigidBody;
         
         public Box2D(Vector2 size,Vector2 position){
             this.rigidBody = new Rigidbody2D(position);

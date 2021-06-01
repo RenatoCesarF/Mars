@@ -40,7 +40,7 @@ namespace Mars
         public static bool pointInBox2D(Vector2 point, Box2D box){
             
             Vector2 pointInBoxSpace = MarsMath.rotate(
-                point,box.getRigidbody2D().getRotation(),
+                point, - box.getRigidbody2D().getRotation(),
                 box.getRigidbody2D().getPosition()
             );
             AABB aabbBox = new AABB(box.size,box.getRigidbody2D().getPosition());
@@ -111,13 +111,16 @@ namespace Mars
 
         }
         public static bool lineInBox2D(LineSegment line, Box2D box){
-            float theta = -box.getRigidbody2D().getRotation();
-            Vector2 center = box.getRigidbody2D().getPosition();
+            Box2D thisBox = box;
+            LineSegment thisLine = line;
 
-            Vector2 rotatedStartLine = MarsMath.rotate(line.getStart(),theta,center);
-            Vector2 rotatedEndLine = MarsMath.rotate(line.getEnd(),theta,center);
+            float theta = -thisBox.getRigidbody2D().getRotation();
+            Vector2 center = thisBox.getRigidbody2D().getPosition();
 
-            AABB aabb = new AABB(box.size,box.getRigidbody2D().getPosition());
+            Vector2 rotatedStartLine = MarsMath.rotate(thisLine.getStart(),theta,center);
+            Vector2 rotatedEndLine = MarsMath.rotate(thisLine.getEnd(),theta,center);
+
+            AABB aabb = new AABB(thisBox.size,thisBox.getRigidbody2D().getPosition());
             LineSegment localRotatedLine = new LineSegment(rotatedStartLine,rotatedEndLine);
 
             return lineInAABB(localRotatedLine,aabb);
