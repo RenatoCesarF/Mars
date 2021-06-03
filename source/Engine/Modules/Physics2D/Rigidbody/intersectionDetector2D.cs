@@ -129,6 +129,103 @@ namespace Mars
         
         
         #endregion
+    
+        #region Raycast
+
+        // public static bool raycast(Circle circle, Ray2D ray,RaycastResult result){
+        //     if(result == null) return false;
+
+        //     RaycastResult.reset(result);
+
+        //     Vector2 originToCircle = circle.getCenter() - ray.getOrigin();
+        //     float radiusSquared = circle.getRadius() * circle.getRadius();
+        //     float originToCircleLenghtSquared = (float)Math.Sqrt(originToCircle.X * originToCircle.X + originToCircle.Y * originToCircle.Y);
+
+        //     float a = (originToCircle.X * ray.getDirection().X) + (originToCircle.Y * ray.getDirection().Y);
+        //     float lenghtCenterCircleToProjected = originToCircleLenghtSquared - (a*a);
+
+        //     if(radiusSquared - lenghtCenterCircleToProjected< 0.0f){
+        //         return false;
+        //     }
+
+        //     float f = (float)Math.Sqrt(radiusSquared - lenghtCenterCircleToProjected);
+
+        //     float t = 0;
+
+        //     if(originToCircleLenghtSquared < radiusSquared){
+        //         t = a + f;
+        //     }else{
+        //         t = a - f;
+        //     }
+
+        //     Vector2 point = ray.getOrigin()  + (ray.getDirection() * t);
+        //     Vector2 normal = point - circle.getCenter();
+        //     normal.Normalize();
+
+        //     result.init(point, normal, t, hit: true);
+        //     return true; 
+
+        // }
+
+        // public static bool raycast(AABB box,Ray2D ray, RaycastResult result){
+        //     RaycastResult.reset(result);
+
+        //     // if(result == null ) return false;
+
+        //     Vector2 unitVector = ray.getDirection();
+        //     unitVector.Normalize();
+        //     unitVector.X = (unitVector.Y !=0) ? 1.0f / unitVector.X : 0f;
+        //     unitVector.X = (unitVector.X !=0) ? 1.0f / unitVector.Y : 0f;
+
+        //     Vector2 min = box.getMin();
+        //     min  = min - (ray.getOrigin() * unitVector);//mudar a ordem das operações com () e ver se muda o resultado
+        //     Vector2 max = box.getMax();
+        //     max = max  - (ray.getOrigin() * unitVector);
+
+        //     float tmin = Math.Max(Math.Min(min.X,max.X), Math.Min(min.Y,max.Y));
+        //     float tmax = Math.Min(Math.Max(min.X,max.X), Math.Max(min.Y,max.Y));
+
+        //     if(tmax < 0 || tmin > tmax){
+        //         return false;
+        //     }
+
+
+        //     float t = (tmin < 0f) ?tmax : tmin;
+        //     bool hit = t>0f;
+
+        //     if(!hit){
+        //         return false;
+        //     }
+
+        //     Vector2 point = ray.getOrigin() + ray.getDirection() * t;
+        //     Vector2 normal = ray.getOrigin() - point;
+        //     normal.Normalize();
+
+        //     result.init(point,normal,t,hit);
+
+        //     return true;
+        // }
+
+        // public static bool raycast(Box2D box, Ray2D ray, RaycastResult result){
+        //     RaycastResult.reset(result);
+        //     Box2D thisBox = box;
+        //     Ray2D thisRay = ray;
+
+        //     float theta = -thisBox.getRigidbody2D().getRotation();
+        //     Vector2 center = thisBox.getRigidbody2D().getPosition();
+
+        //     Vector2 rotatedStartRay = MarsMath.rotate(thisRay.getOrigin(),theta,center);
+        //     Vector2 rotatedEndRay = MarsMath.rotate(thisRay.getDirection(),theta,center);
+
+        //     AABB aabb = new AABB(thisBox.size,thisBox.getRigidbody2D().getPosition());
+        //     Ray2D localRotatedRay = new Ray2D(rotatedStartRay,rotatedEndRay);
+
+        //     return raycast(aabb,thisRay,new RaycastResult());
+        // }
+
+
+        #endregion
+    
     }
 
 }
