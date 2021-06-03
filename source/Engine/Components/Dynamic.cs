@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Content;
 
 namespace Mars.Components
 {
-    public class RigidBody2D : Component
+    public class Dynamic : Component
     {
         private Texture2D whiteRectangle;
         private Vector2  force, aceleration;
@@ -24,7 +24,7 @@ namespace Mars.Components
         /// <param name="position">The start position of the Entity.</param>
         /// <param name="color">If the Component doesn't have a Texture, it needs to receve a Color</param>
         /// <param name="mass">the mass will interfer in motion and colision stuff</param>
-        public RigidBody2D(Game game, Vector2 position, Color color, float mass = 0.1f )  {
+        public Dynamic(Game game, Vector2 position, Color color, float mass = 0.1f )  {
             this.mass = mass;
             this.position= position;
             this.rectColor = color;

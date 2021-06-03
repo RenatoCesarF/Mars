@@ -1,4 +1,5 @@
 *.vscode
+*.h
 *.cache
 ./bin/Debug/*
 ./bin/*

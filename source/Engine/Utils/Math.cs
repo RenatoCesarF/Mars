@@ -18,7 +18,7 @@ namespace Mars
 
             xPrime += origin.X;
             yPrime += origin.Y;
-            
+
             return new Vector2(xPrime,yPrime);
         }
 

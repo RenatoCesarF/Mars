@@ -80,7 +80,7 @@ namespace Mars.Primitivies
 		/// <param name="toPoint">The end point</param>
 		/// <param name="color">The color to use</param>
 		/// <param name="thickness">The thickness of the line</param>
-		public static void DrawLineToPoint(this SpriteBatch spriteBatch, Vector2 fromPoint, Vector2 toPoint, Color color, float thickness){
+		public static void DrawLineToPoint(this SpriteBatch spriteBatch, Vector2 fromPoint, Vector2 toPoint, Color color, float thickness = 5){
 				// calculate the distance between the two vectors
 				float distance = Vector2.Distance(fromPoint, toPoint);
 
