@@ -62,6 +62,4 @@ namespace Mars
             Global.spriteBatch.Draw(pixel,this.getRigidbody2D().getPosition(),null,Color.Aqua,this.getRigidbody2D().getRotation(),new Vector2(0.5f,0.5f),this.size,Microsoft.Xna.Framework.Graphics.SpriteEffects.None,0);
         }
     }
-
-
 }

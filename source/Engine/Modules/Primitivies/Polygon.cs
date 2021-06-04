@@ -7,7 +7,6 @@ namespace Mars
     public class Polygon {
         public List<Vector2> points;
         private Vector2 position;
-        private float angle;
         public bool overlap;
        
         /// <summary>
@@ -40,12 +39,11 @@ namespace Mars
         }
 
         public void addPoint(Vector2 pointPosition){
-            Console.WriteLine(this.points.Capacity);
             this.points.Capacity = this.points.Capacity+1;
             this.points.Add(pointPosition);
-            Console.WriteLine(this.points.Capacity);
         }
         public void removePoint(int position = -1){
+            if(points.Capacity <= 1) return;
             if(position == -1){
                 position = this.points.Capacity-1;
             }
@@ -60,9 +58,5 @@ namespace Mars
             }
             // DrawPrimitive.DrawLineToPoint(Global.spriteBatch, points[0],position,Color.Yellow);
         }
-
-
-
     }
-    
 }

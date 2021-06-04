@@ -13,16 +13,11 @@ namespace Mars
         public List<InputKey> pressedKeys = new List<InputKey>(), previousPressedKeys = new List<InputKey>();
 
         public InputKeyboard(){
-            pressTimer = new MarsTimer(130);
+            pressTimer = new MarsTimer(130,true);
         }
 
         public virtual void Update(){
             pressTimer.UpdateTimer();
-            
-            //if(!pressTimer.hasFinished()){ return;}
-
-
-            pressTimer.ResetToZero();
 
             newKeyboard = Keyboard.GetState();
             GetPressedKeys();
@@ -39,12 +34,16 @@ namespace Mars
         }
 
 
-        public bool GetPress(string KEY)
-{
+        public bool GetPress(string KEY){
+            if(!pressTimer.hasFinished()){ return false;}
+
+
             for(int i=0;i<pressedKeys.Count;i++)
             {
                 if(pressedKeys[i].key == KEY)
                 {
+                    Global.console.print(KEY.ToString());
+                    pressTimer.ResetToZero();
                     return true;
                 }
             }
