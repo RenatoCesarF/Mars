@@ -6,6 +6,8 @@ namespace Mars
 {
     public class Polygon {
         public List<Vector2> points;
+        private float size;
+        private int edges;
         private Vector2 position;
         public bool overlap;
        
@@ -17,6 +19,8 @@ namespace Mars
         /// <param name="edges">The number of Edges of it</param>
         public Polygon(Vector2 position, float size,int edges ){
             this.position = position;
+            this.size = size;
+            this.edges = edges;
             this.points = new List<Vector2>(edges);
             
             for(int i = 0; i < edges; i ++){
@@ -29,6 +33,7 @@ namespace Mars
                 );
             }
         }
+        
         /// <summary>
         /// Create polygon receving a infinit number of Points that have it's own position
         /// </summary>
@@ -51,6 +56,28 @@ namespace Mars
             this.points.RemoveAt(position);
             this.points.Capacity -= 1;
 
+        }
+        
+        /// <summary>
+        /// Change the position of all the points of the polygon and it's position
+        /// </summary>
+        public void transform(Vector2 position){
+            this.position = position;
+            for(int i = 0; i < edges; i ++){
+                this.points[i] = new Vector2(
+                    (10*size) * (float)Math.Cos(( MathHelper.Pi * 2 /edges) * i),
+                    (10*size) * (float)Math.Sin((MathHelper.Pi * 2 /edges) * i)
+                ) + position;
+            }
+        }
+        public void AddToPosition(Vector2 addToPosition){
+            this.position += addToPosition;
+            for(int i = 0; i < edges; i ++){
+                this.points[i] += new Vector2(
+                    (10*size) * (float)Math.Cos(( MathHelper.Pi * 2 /edges) * i),
+                    (10*size) * (float)Math.Sin((MathHelper.Pi * 2 /edges) * i)
+                ) + addToPosition;
+            }
         }
         public void Draw(){
             for(int i = 0; i< this.points.Capacity; i++){

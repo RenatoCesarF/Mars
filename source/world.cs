@@ -15,12 +15,9 @@ namespace Mars{
 
         public virtual void Update(){
             if(Global.keyboard.GetPress("Space")){
-               polygon.addPoint(Global.mouseControl.getMousePosition());
+               polygon.transform(Global.mouseControl.getMousePosition());
             }
-            if(Global.keyboard.GetPress("R") ){
-               polygon.removePoint();
-            }
-                
+          
         }
         public virtual void Draw(Vector2 OFFSET){
             polygon.Draw();
