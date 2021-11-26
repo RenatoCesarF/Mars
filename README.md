@@ -1,6 +1,8 @@
-# *Mars*
+# *Mars*(Deprecated)
 
+this project was replaced by [Rings](https://github.com/RenatoCesarF/Rings)
 ### Game Framework with monogame
+
 
 The engine that I gonna use to make my onw games
 
